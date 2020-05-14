@@ -331,7 +331,12 @@ mailChimp();
       //  }
       // });
 
-
+// database send to local storage
+$(document).ready(function() {
+  var users = [{"name" : "Mário Chiquito da Silva", "dataNasc" : "20/04/1968", "email" : "chiquito_420@sapo.pt", "phoneNumber" : "910000019", "description" : "Sou o Chico e sou muito trabalhador.", "categoria profissional" : ""}, {}];
+  localStorage.setItem("users", JSON.stringify(users));
+  console.log(localStorage.getItem("users"))
+});
 
 
 
