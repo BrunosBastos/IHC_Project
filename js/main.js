@@ -331,13 +331,18 @@ mailChimp();
       //  }
       // });
 
-// database send to local storage
+// database send to local storage - seekers, employers, offers, applications
 $(document).ready(function() {
-  var users = [{"name" : "Mário Chiquito da Silva", "dataNasc" : "20/04/1968", "email" : "chiquito_420@sapo.pt", "phoneNumber" : "910000019", "description" : "Sou o Chico e sou muito trabalhador.", "categoria profissional" : ""}, {}];
-  localStorage.setItem("users", JSON.stringify(users));
-  console.log(localStorage.getItem("users"))
+  var seekers = [{"name" : "Mário Chiquito da Silva", "dataNasc" : "20/04/1968", "city":"Aveiro", "address": "Avenida D. João I", "email" : "chiquito_420@sapo.pt", "password":"palavrapasse", "phoneNumber" : "910000019", "description" : "Sou o Chico e sou muito trabalhador.", "type" : ""}];
+  localStorage.setItem("seekers", JSON.stringify(seekers));
+  var employers =[{"name" : "Bastos e Irmãos", "email":"bastoseirmaos@gmail.com", "password":"reybastos", "address":"Rua Qualquer Coisa", "city":"Aveiro", "phone" : "932222222"}]
+  localStorage.setItem("employers", JSON.stringify(employers));
+  var offers = [];
+  localStorage.setItem("offers", JSON.stringify(offers))
+  var applications = [];
+  localStorage.setItem("offers", JSON.stringify(applications))
 });
 
 
 
-})(jQuery);	
+})(jQuery);
