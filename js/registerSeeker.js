@@ -169,7 +169,7 @@ if(candidate.length){
     $grid.isotope({ filter: filterValue });
   });
 
-  //for menu active class
+  // for menu active class
   $('.portfolio-menu button').on('click', function (event) {
     $(this).siblings('.active').removeClass('active');
     $(this).addClass('active');

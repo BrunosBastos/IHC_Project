@@ -57,8 +57,8 @@
                                     <div class="phone_num mr-4 d-xl-block">
                                         <a href="./login.html">Log in</a>
                                     </div>
-                                    <div class="d-lg-block">
-                                        <a class="boxed-btn3" style="height: 20%;" href="./register.html">Register</a>
+                                    <div id="regist-btn" class="d-lg-block">
+                                        <a class="boxed-btn3" style="height: 20%;" href="#">Register</a>
                                     </div>
                                 </div>
                             </div>
@@ -411,21 +411,21 @@
     </div>
 
     <!-- job_searcing_wrap  -->
-    <div class="job_searcing_wrap overlay">
+    <div id="regist-opts" class="job_searcing_wrap overlay">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 offset-lg-1 col-md-6">
                     <div class="searching_text">
                         <h3>Looking for a Job?</h3>
-                        <p>Register in our platform to benefit with our quick and easy.</p>
-                        <a href="#" class="boxed-btn3">Browse Job</a>
+                        <p>Register as a Job Seeker to benefit with our quick and easy job browser.</p>
+                        <a href="./register_seeker.html" class="boxed-btn3">Register as Seeker</a>
                     </div>
                 </div>
                 <div class="col-lg-5 offset-lg-1 col-md-6">
                     <div class="searching_text">
                         <h3>Looking for an Expert?</h3>
-                        <p>Register to find the most suitable candidates to work with you.</p>
-                        <a href="#" class="boxed-btn3">Post a Job</a>
+                        <p>Register as a Job Recruiter to post your jobs and find the most suitable candidates.</p>
+                        <a href="./register_recruiter.html" class="boxed-btn3">Register as Recruiter</a>
                     </div>
                 </div>
             </div>
@@ -558,6 +558,20 @@
 
 
     <script src="js/main.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#regist-btn").click(function(e) {
+                // Prevent a page reload when a link is pressed
+                e.preventDefault();
+                // Scroll
+                $('html,body').animate({
+                    scrollTop: $("#regist-opts").offset().top
+                }, 'slow');
+            });
+
+        });
+    </script>
 </body>
 
 </html>
