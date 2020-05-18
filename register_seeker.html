@@ -57,43 +57,63 @@
 
     <!-- slider_area_start -->
     <div class="slider_area">
-        <div class="single_slider  d-flex align-items-center slider_bg_1">
+        <div class="single_slider d-flex align-items-center slider_bg_1" style="height: auto">
             <div class="container">
-                <div class="row align-items-center ">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="rounded bg-white p-5" style="margin-top: 20%; margin-bottom: 20%;">
+                <div class="row align-items-center" style="margin-top: 5rem; margin-bottom: 5rem">
+                    <div class="col-lg-6 col-md-8 col-sm-12">
+                        <div class="rounded bg-white p-5" >
                             <form>
-                            
                                 <div class="form-row">
                                   <div class="form-group col-md-6">
                                     <label for="SeekerRegisterEmail">Email</label>
-                                    <input type="email" class="form-control" id="SeekerRegisterEmail" placeholder="Email">
+                                    <input type="email" class="form-control " id="SeekerRegisterEmail" placeholder="Email">
+                                    <div id="RSInvalidEmail" class="invalid-feedback d-none">
+                                        Invalid email.
+                                    </div>
                                   </div>
                                   <div class="form-group col-md-6">
                                     <label for="SeekerRegisterPassword">Password</label>
-                                    <input type="password" class="form-control" id="SeekerRegisterPassword" placeholder="Password">
+                                    <input type="password" class="form-control " id="SeekerRegisterPassword" placeholder="Password">
+                                    <div id="RSInvalidPassword" class="invalid-feedback d-none">
+                                        Invalid password length.
+                                    </div>
                                   </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="SeekerRegisterName">Name</label>
-                                    <input type="text" class="form-control" id="SeekerRegisterName" placeholder="Apartment, studio, or floor">
+                                    <input type="text" class="form-control " id="SeekerRegisterName" placeholder="Name">
+                                    <div id="RSInvalidName" class="invalid-feedback d-none">
+                                        Invalid name.
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="SeekerRegisterProfessionalCategory">Professinal Category</label>
-                                    <input type="text" class="form-control" id="SeekerRegisterProfessionalCategory" placeholder="Apartment, studio, or floor">
+                                    <input type="text" class="form-control" id="SeekerRegisterProfessionalCategory" placeholder="Professional Category">
+                                    <div id="RSInvalidCategory" class="invalid-feedback d-none">
+                                        Invalid Professional Category.
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="SeekerRegisterAddress">Address</label>
-                                    <input type="text" class="form-control" id="SeekerRegisterAddress" placeholder="1234 Main St">
+                                    <input type="text" class="form-control" id="SeekerRegisterAddress" placeholder="Address">
+                                    <div id="RSInvalidAddress" class="invalid-feedback d-none">
+                                        Invalid address.
+                                    </div>
                                 </div>
                                 <div class="form-row">
                                   <div class="form-group col-md-6">
                                     <label for="SeekerRegisterCity">City</label>
-                                    <input type="text" class="form-control" id="SeekerRegisterCity">
+                                    <input type="text" class="form-control" id="SeekerRegisterCity" placeholder="City">
+                                    <div id="RSInvalidCity" class="invalid-feedback d-none">
+                                        Invalid City.
+                                    </div>
                                   </div>
                                   <div class="form-group col-md-4">
                                     <label for="SeekerRegisterPhoneNumber">Phone</label>
-                                    <input type="text" class="form-control" id="SeekerRegisterPhoneNumber">
+                                    <input type="text" class="form-control" id="SeekerRegisterPhoneNumber" placeholder="Phone">
+                                    <div  id="RSInvalidPhone" class="invalid-feedback d-none">
+                                        Invalid Phone number.
+                                    </div>
                                   </div>
                                     
                                 </div>
@@ -101,16 +121,19 @@
                                     <div class="form-group col-sm-8 col-md-12 col-lg-8">
                                         <label for="SeekerRegisterYear">Birth</label>
                                         <div class="input-group">
-                                            <input type="text" placeholder="YYYY" class="form-control" id="SeekerRegisterYear">
-                                            <input type="text" placeholder="MM" class="form-control" id="SeekerRegisterMonth">
-                                            <input type="text" placeholder="DD" class="form-control" id="SeekerRegisterDay">
+                                            <input type="text" placeholder="YYYY" class="form-control " id="SeekerRegisterYear">
+                                            <input type="text" placeholder="MM" class="form-control " id="SeekerRegisterMonth">
+                                            <input type="text" placeholder="DD" class="form-control " id="SeekerRegisterDay">
+                                            <div id="RSInvalidBirth" class="invalid-feedback d-none">
+                                                Invalid Birth.
+                                            </div>
                                         </div>
+                                       
                                         
                                     </div>
                                 </div>    
                                 
-                                <div class="form-row ">
-                                    
+                                <div class="form-row">
                                     <button id="SignInButton" type="button" class="btn btn-primary">Sign in</button>
                                 </div>  
                               </form>
@@ -249,6 +272,7 @@
 
 
     <script src="js/registerSeeker.js"></script>
+    
 </body>
 
 </html>

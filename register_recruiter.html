@@ -57,11 +57,11 @@
 
     <!-- slider_area_start -->
     <div class="slider_area">
-        <div class="single_slider  d-flex align-items-center slider_bg_1">
+        <div class="single_slider d-flex align-items-center slider_bg_1" style="height: auto">
             <div class="container">
-                <div class="row align-items-center ">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="rounded bg-white p-5" style="margin-top: 20%; margin-bottom: 20%;">
+                <div class="row align-items-center" style="margin-top: 5rem; margin-bottom: 5rem">
+                    <div class="col-lg-6 col-md-8 col-sm-12">
+                        <div class="rounded bg-white p-5" >
                             <form>
                             
                                 <div class="form-row">
@@ -95,7 +95,7 @@
                                 </div>
                                 <div class="form-row ">
                                     
-                                    <button id="sign-in" type="submit" class="btn btn-primary">Sign in</button>
+                                    <button id="sign-in" type="button" class="btn btn-primary">Sign in</button>
                                 </div>  
                               </form>
                         </div>
@@ -243,11 +243,9 @@
             // validation...
 
             if (success) {
-                console.log("a")
-                location.href = './jobs.html';
+                window.location.href = './jobs.html';
             };
         });
-
     });
 </script>
 
