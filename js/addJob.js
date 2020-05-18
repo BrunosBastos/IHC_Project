@@ -486,7 +486,7 @@
                 }
             }
 
-            offers.push({ "id":id+1, "name": name, "dataNasc": day + "/" + month + "/" + year, "city": city, "address": address, "email": email, "password": password, "phoneNumber": phone, "description": "", "category": type })
+            offers.push({"id":id+1, "email":localStorage.getItem("current_user"), "role": role, "city": city, "address": address, "category": category, "jobNature": jobNature, "salary": salary, "vacancy": vancancy, "description":description})
 
             localStorage.setItem("offers", JSON.stringify(offers));
 
