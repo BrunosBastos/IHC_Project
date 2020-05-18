@@ -495,7 +495,7 @@ mailChimp();
               } 
             }
             
-            seekers.push({"name" : name, "dataNasc" : day+"/"+month+"/"+year, "city":city, "address": address, "email" : email, "password":password, "phoneNumber" : phone, "description" : "", "type" : type})
+            seekers.push({"name" : name, "dataNasc" : day+"/"+month+"/"+year, "city":city, "address": address, "email" : email, "password":password, "phoneNumber" : phone, "description" : "", "category" : type})
             
             localStorage.setItem("seekers",JSON.stringify(seekers));
 
