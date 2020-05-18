@@ -370,15 +370,13 @@ mailChimp();
           var month = $("#SeekerRegisterMonth").val()
           var year = $("#SeekerRegisterYear").val()
           let flag = true;
-          var id = "";
+          var id = "html";
 
           if(email.length==0 || !(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))){
-            
             $("#RSInvalidEmail").removeClass("d-none");
             $("#SeekerRegisterEmail").removeClass("is-valid");
             $("#SeekerRegisterEmail").addClass("is-invalid");
             $("#RSInvalidEmail").innerHtml = "Invalid Email ";
-
             if (flag) id = "#SeekerRegisterEmail";
             flag = false;
 
@@ -422,6 +420,18 @@ mailChimp();
             $("#RSInvalidCategory").addClass("d-none");
             $("#SeekerRegisterProfessionalCategory").removeClass("is-invalid");
             $("#SeekerRegisterProfessionalCategory").addClass("is-valid");
+          }
+
+          if(type.length<3 || type.length>30){
+            $("#RSInvalidQualification").removeClass("d-none");
+            $("#SeekerRegisterProfessionalQualification").removeClass("is-valid");
+            $("#SeekerRegisterProfessionalQualification").addClass("is-invalid");
+            if (flag) id = "#SeekerRegisterProfessionalQualification";
+            flag = false;
+          }else{
+            $("#RSInvalidQualification").addClass("d-none");
+            $("#SeekerRegisterProfessionalQualification").removeClass("is-invalid");
+            $("#SeekerRegisterProfessionalQualification").addClass("is-valid");
           }
 
           if(address.length<5 || type.length>50){
@@ -478,7 +488,6 @@ mailChimp();
             $("#SeekerRegisterMonth").addClass("is-valid");
             $("#SeekerRegisterDay").removeClass("is-invalid");
             $("#SeekerRegisterDay").addClass("is-valid");
-            
           }
           
           if (flag) {

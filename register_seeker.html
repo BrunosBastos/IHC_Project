@@ -64,14 +64,14 @@
                         <div class="rounded bg-white p-5" >
                             <form>
                                 <div class="form-row">
-                                  <div class="form-group col-md-6">
+                                  <div class="form-group col-md-7">
                                     <label for="SeekerRegisterEmail">Email</label>
                                     <input type="email" class="form-control " id="SeekerRegisterEmail" placeholder="Email">
                                     <div id="RSInvalidEmail" class="invalid-feedback d-none">
                                         Invalid email.
                                     </div>
                                   </div>
-                                  <div class="form-group col-md-6">
+                                  <div class="form-group col-md-5">
                                     <label for="SeekerRegisterPassword">Password</label>
                                     <input type="password" class="form-control " id="SeekerRegisterPassword" placeholder="Password">
                                     <div id="RSInvalidPassword" class="invalid-feedback d-none">
@@ -88,9 +88,36 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="SeekerRegisterProfessionalCategory">Professinal Category</label>
-                                    <input type="text" class="form-control" id="SeekerRegisterProfessionalCategory" placeholder="Professional Category">
+                                    <input list=category type="text" class="form-control" id="SeekerRegisterProfessionalCategory" placeholder="Category">
+                                    <datalist id=category>
+                                        <option value="Design & Creative"></option>
+                                        <option value="Marketing"></option>
+                                        <option value="Telemarketing"></option>
+                                        <option value="Software & Web"></option>
+                                        <option value="Administration"></option>
+                                        <option value="Teaching & Education"></option>
+                                        <option value="Engineering"></option>
+                                        <option value="Garments / Textile"></option>
+                                    </datalist>
                                     <div id="RSInvalidCategory" class="invalid-feedback d-none">
                                         Invalid Professional Category.
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="SeekerRegisterEducation">Education Level</label>
+                                    <input list=education type="text" class="form-control" id="SeekerRegisterEducation" placeholder="Education">
+                                    <datalist id=education>
+                                        <option value="Less Than High School"></option>
+                                        <option value="High School Diploma or Equivalent"></option>
+                                        <option value="Some College, No Degree"></option>
+                                        <option value="Associate’s Degree"></option>
+                                        <option value="Bachelor’s Degree"></option>
+                                        <option value="Postsecondary Non-Degree Award"></option>
+                                        <option value="Master’s Degree"></option>
+                                        <option value="Doctoral or Professional Degree"></option>
+                                    </datalist>
+                                    <div id="RSInvalidQualification" class="invalid-feedback d-none">
+                                        Invalid Professional Qualification.
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -101,14 +128,14 @@
                                     </div>
                                 </div>
                                 <div class="form-row">
-                                  <div class="form-group col-md-6">
+                                  <div class="form-group col-md-7">
                                     <label for="SeekerRegisterCity">City</label>
                                     <input type="text" class="form-control" id="SeekerRegisterCity" placeholder="City">
                                     <div id="RSInvalidCity" class="invalid-feedback d-none">
                                         Invalid City.
                                     </div>
                                   </div>
-                                  <div class="form-group col-md-4">
+                                  <div class="form-group col-md-5">
                                     <label for="SeekerRegisterPhoneNumber">Phone</label>
                                     <input type="text" class="form-control" id="SeekerRegisterPhoneNumber" placeholder="Phone">
                                     <div  id="RSInvalidPhone" class="invalid-feedback d-none">
@@ -121,9 +148,9 @@
                                     <div class="form-group col-sm-8 col-md-12 col-lg-8">
                                         <label for="SeekerRegisterYear">Birth</label>
                                         <div class="input-group">
-                                            <input type="text" placeholder="YYYY" class="form-control " id="SeekerRegisterYear">
-                                            <input type="text" placeholder="MM" class="form-control " id="SeekerRegisterMonth">
-                                            <input type="text" placeholder="DD" class="form-control " id="SeekerRegisterDay">
+                                            <input type="text" placeholder="YYYY" class="form-control" id="SeekerRegisterYear">
+                                            <input type="text" placeholder="MM" class="form-control" id="SeekerRegisterMonth">
+                                            <input type="text" placeholder="DD" class="form-control" id="SeekerRegisterDay">
                                             <div id="RSInvalidBirth" class="invalid-feedback d-none">
                                                 Invalid Birth.
                                             </div>
