@@ -7470,3 +7470,9 @@ h6 {
   margin-right: 10px;
   font-size: 12px;
 }
+
+/* new css styles */
+.disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}
