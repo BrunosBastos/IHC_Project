@@ -338,9 +338,9 @@ mailChimp();
 $(document).ready(function() {
   let seekers = [{"name" : "Mário Chiquito da Silva", "dataNasc" : "20/04/1968", "city":"Aveiro", "address": "Avenida D. João I", "email" : "chiquito_420@sapo.pt", "password":"palavrapasse", "phoneNumber" : "910000019", "description" : "Sou o Chico e sou muito trabalhador.", "type" : ""}];
   localStorage.setItem("seekers", JSON.stringify(seekers));
-  let employers =[{"name" : "Bastos e Irmãos", "email":"bastoseirmaos@gmail.com", "password":"reybastos", "address":"Rua Qualquer Coisa", "city":"Aveiro", "phone" : "932222222"}]
-  localStorage.setItem("employers", JSON.stringify(employers));
-  let offers = [];
+  let recruiters =[{"name" : "Bastos e Irmãos", "email":"bastoseirmaos@gmail.com", "password":"reybastos", "address":"Rua Qualquer Coisa", "city":"Aveiro", "phone" : "932222222"}]
+  localStorage.setItem("recruiters", JSON.stringify(recruiters));
+  let offers = [{"role":"Engenheiro Informático", "City":"Aveiro", "Address":"Rua D. Maria", "Category":"Software & Web", "JobNature":"Full-time", "Salary":"1200", Vacancy:"3", "Description":""}];
   localStorage.setItem("offers", JSON.stringify(offers))
   let applications = [];
   localStorage.setItem("offers", JSON.stringify(applications))
