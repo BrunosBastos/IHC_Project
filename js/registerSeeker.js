@@ -357,12 +357,14 @@ mailChimp();
       //      rightIcon: '<span class="fa fa-caret-down"></span>'
       //  }
       // });
+      
 
         $("#SignInButton").click(function () { 
           var email = $("#SeekerRegisterEmail").val() //type=email no html já faz verificações
           var password = $("#SeekerRegisterPassword").val()
           var name = $("#SeekerRegisterName").val()
           var type = $("#SeekerRegisterProfessionalCategory").val()
+          var education = $("#SeekerRegisterEducation").val()
           var address = $("#SeekerRegisterAddress").val()
           var city = $("#SeekerRegisterCity").val()
           var phone = $("#SeekerRegisterPhoneNumber").val()
@@ -410,7 +412,7 @@ mailChimp();
             $("#SeekerRegisterName").addClass("is-valid");
           }
           
-          if(type.length<3 || type.length>30){
+          if(type.length<3 || type.length>50){
             $("#RSInvalidCategory").removeClass("d-none");
             $("#SeekerRegisterProfessionalCategory").removeClass("is-valid");
             $("#SeekerRegisterProfessionalCategory").addClass("is-invalid");
@@ -422,16 +424,16 @@ mailChimp();
             $("#SeekerRegisterProfessionalCategory").addClass("is-valid");
           }
 
-          if(type.length<3 || type.length>30){
-            $("#RSInvalidQualification").removeClass("d-none");
-            $("#SeekerRegisterProfessionalQualification").removeClass("is-valid");
-            $("#SeekerRegisterProfessionalQualification").addClass("is-invalid");
-            if (flag) id = "#SeekerRegisterProfessionalQualification";
+          if(education.length<3 || education.length>50){
+            $("#RSInvalidEducation").removeClass("d-none");
+            $("#SeekerRegisterEducation").removeClass("is-valid");
+            $("#SeekerRegisterEducation").addClass("is-invalid");
+            if (flag) id = "#SeekerRegisterEducation";
             flag = false;
           }else{
-            $("#RSInvalidQualification").addClass("d-none");
-            $("#SeekerRegisterProfessionalQualification").removeClass("is-invalid");
-            $("#SeekerRegisterProfessionalQualification").addClass("is-valid");
+            $("#RSInvalidEducation").addClass("d-none");
+            $("#SeekerRegisterEducation").removeClass("is-invalid");
+            $("#SeekerRegisterEducation").addClass("is-valid");
           }
 
           if(address.length<5 || type.length>50){

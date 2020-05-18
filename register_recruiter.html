@@ -60,44 +60,62 @@
         <div class="single_slider d-flex align-items-center slider_bg_1" style="height: auto">
             <div class="container">
                 <div class="row align-items-center" style="margin-top: 5rem; margin-bottom: 5rem">
-                    <div class="col-lg-6 col-md-8 col-sm-12">
-                        <div class="rounded bg-white p-5" >
+                    <div class="col-lg-7 col-md-9 col-sm-12">
+                        <div class="rounded bg-white p-5">
                             <form>
-                            
+
                                 <div class="form-row">
-                                  <div class="form-group col-md-6">
-                                    <label for="RecruiterRegisterEmail">Email</label>
-                                    <input type="email" class="form-control" id="RecruiterRegisterEmail" placeholder="Email">
-                                  </div>    
-                                  <div class="form-group col-md-6">
-                                    <label for="RecruiterRegisterPassword">Password</label>
-                                    <input type="password" class="form-control" id="RecruiterRegisterPassword" placeholder="Password">
-                                  </div>
+                                    <div class="form-group col-md-7">
+                                        <label for="RecruiterRegisterEmail">Company Email</label>
+                                        <input type="email" class="form-control " id="RecruiterRegisterEmail">
+                                        <div id="RRInvalidEmail" class="invalid-feedback d-none">
+                                            Invalid email.
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-5">
+                                        <label for="RecruiterRegisterPassword">Password</label>
+                                        <input type="password" class="form-control" id="RecruiterRegisterPassword">
+                                        <div id="RRInvalidPassword" class="invalid-feedback d-none">
+                                            Invalid Password.
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="RecruiterRegisterName">Company Name</label>
-                                    <input type="text" class="form-control" id="RecruiterRegisterName" placeholder="Company Name">
+                                    <input type="text" class="form-control" id="RecruiterRegisterName">
+                                    <div id="RRInvalidName" class="invalid-feedback d-none">
+                                        Invalid Company Name.
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="RecruiterRegisterAddress">Address</label>
-                                    <input type="text" class="form-control" id="RecruiterRegisterAddress" placeholder="Address">
+                                    <input type="text" class="form-control" id="RecruiterRegisterAddress" placeholder="ex: 86 Rua das Cortinhas">
+                                    <div id="RRInvalidAddress" class="invalid-feedback d-none">
+                                        Invalid Address.
+                                    </div>
                                 </div>
                                 <div class="form-row">
-                                  <div class="form-group col-md-6">
-                                    <label for="RecruiterRegisterCity">City</label>
-                                    <input type="text" class="form-control" id="RecruiterRegisterCity">
-                                  </div>
-                                  <div class="form-group col-md-4">
-                                    <label for="RecruiterRegisterPhoneNumber">Phone</label>
-                                    <input type="text" class="form-control" id="RecruiterRegisterPhoneNumber">
-                                  </div>
-                                    
+                                    <div class="form-group col-md-7">
+                                        <label for="RecruiterRegisterCity">City</label>
+                                        <input type="text" class="form-control" id="RecruiterRegisterCity" placeholder="ex: Aveiro">
+                                        <div id="RRInvalidCity" class="invalid-feedback d-none">
+                                            Invalid City.
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-5">
+                                        <label for="RecruiterRegisterPhoneNumber">Phone</label>
+                                        <input type="text" class="form-control" id="RecruiterRegisterPhoneNumber">
+                                        <div id="RRInvalidPhoneNumber" class="invalid-feedback d-none">
+                                            Invalid Phone Number.
+                                        </div>
+                                    </div>
+
                                 </div>
                                 <div class="form-row ">
-                                    
+
                                     <button id="sign-in" type="button" class="btn btn-primary">Sign in</button>
-                                </div>  
-                              </form>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -107,8 +125,8 @@
     <!-- slider_area_end -->
 
 
-    
-   
+
+
     <!-- footer start -->
     <footer class="footer">
         <div class="footer_top">
@@ -197,7 +215,7 @@
                     -->
                 </div>
             </div>
-        </div>  
+        </div>
     </footer>
     <!--/ footer end  -->
 
@@ -236,8 +254,8 @@
 </body>
 
 <script>
-    $(document).ready(function(){
-        $("#sign-in").click(function(e) {
+    $(document).ready(function () {
+        $("#sign-in").click(function (e) {
             var success = true;
 
             // validation...
@@ -250,4 +268,3 @@
 </script>
 
 </html>
-
