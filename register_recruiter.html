@@ -113,7 +113,7 @@
                                 </div>
                                 <div class="form-row ">
 
-                                    <button id="sign-in" type="button" class="btn btn-primary">Sign in</button>
+                                    <button id="SignInButton" type="button" class="btn btn-primary">Sign in</button>
                                 </div>
                             </form>
                         </div>
@@ -251,20 +251,7 @@
 
     <script src="js/knockout.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/registerRecruiter.js"></script>
 </body>
-
-<script>
-    $(document).ready(function () {
-        $("#sign-in").click(function (e) {
-            var success = true;
-
-            // validation...
-
-            if (success) {
-                window.location.href = './jobs.html';
-            };
-        });
-    });
-</script>
 
 </html>

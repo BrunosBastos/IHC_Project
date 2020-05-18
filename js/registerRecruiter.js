@@ -47,7 +47,7 @@ $(document).ready(function(){
           $("#RecruiterRegisterName").addClass("is-valid");
         }
 
-        if(address.length<5 || type.length>50){
+        if(address.length<5 || address.length>50){
           $("#RRInvalidAddress").removeClass("d-none");
           $("#RecruiterRegisterAddress").removeClass("is-valid");
           $("#RecruiterRegisterAddress").addClass("is-invalid");
@@ -71,7 +71,7 @@ $(document).ready(function(){
           $("#RecruiterRegisterCity").addClass("is-valid");
         }
 
-        if(phone.length<3 || phone.length>15){
+        if(phone.length<3 || phone.length>15 || !isNaN(phone)){
           $("#RRInvalidPhone").removeClass("d-none");
           $("#RecruiterRegisterPhoneNumber").removeClass("is-valid");
           $("#RecruiterRegisterPhoneNumber").addClass("is-invalid");
@@ -84,7 +84,7 @@ $(document).ready(function(){
         }
         
         if (flag) {
-          let RecruiterR = JSON.paRRe(localStorage.getItem("RecruiterR"));
+          let RecruiterR = JSON.parse(localStorage.getItem("RecruiterR"));
           console.log(RecruiterR)
 
           for(let i=0;i<RecruiterR.length;i++){
@@ -105,7 +105,6 @@ $(document).ready(function(){
         } else {
           if ($(window).scrollTop() > $(id).offset().top-60){
             $('html,body').animate({
-              
               scrollTop: $(id).offset().top-60
             }, 'slow');
           }

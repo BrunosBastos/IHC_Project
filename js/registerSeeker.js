@@ -436,7 +436,7 @@ mailChimp();
             $("#SeekerRegisterEducation").addClass("is-valid");
           }
 
-          if(address.length<5 || type.length>50){
+          if(address.length<5 || address.length>50){
             $("#RSInvalidAddress").removeClass("d-none");
             $("#SeekerRegisterAddress").removeClass("is-valid");
             $("#SeekerRegisterAddress").addClass("is-invalid");
@@ -460,7 +460,7 @@ mailChimp();
             $("#SeekerRegisterCity").addClass("is-valid");
           }
 
-          if(phone.length<3 || phone.length>15){
+          if(phone.length<3 || phone.length>15 || !isNaN(phone)){
             $("#RSInvalidPhone").removeClass("d-none");
             $("#SeekerRegisterPhoneNumber").removeClass("is-valid");
             $("#SeekerRegisterPhoneNumber").addClass("is-invalid");
