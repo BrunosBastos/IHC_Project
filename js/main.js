@@ -340,7 +340,7 @@ $(document).ready(function() {
   localStorage.setItem("seekers", JSON.stringify(seekers));
   let recruiters =[{"name" : "Bastos e Irmãos", "email":"bastoseirmaos@gmail.com", "password":"reybastos", "address":"Rua Qualquer Coisa", "city":"Aveiro", "phone" : "932222222"}]
   localStorage.setItem("recruiters", JSON.stringify(recruiters));
-  let offers = [{"role":"Engenheiro Informático", "City":"Aveiro", "Address":"Rua D. Maria", "Category":"Software & Web", "JobNature":"Full-time", "Salary":"1200", Vacancy:"3", "Description":""}];
+  let offers = [{"id":1, "role":"Engenheiro Informático", "City":"Aveiro", "Address":"Rua D. Maria", "Category":"Software & Web", "JobNature":"Full-time", "Salary":"1200", Vacancy:"3", "Description":""}];
   localStorage.setItem("offers", JSON.stringify(offers))
   let applications = [];
   localStorage.setItem("offers", JSON.stringify(applications))
