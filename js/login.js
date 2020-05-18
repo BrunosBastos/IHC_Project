@@ -29,6 +29,7 @@ $(document).ready(function (){
         
         if(flag!="false"){
             if(user.password.localeCompare(pass)==0){
+                localStorage.setItem("current_user", user)
                 if(flag =="seeker"){
                     window.location.href = "./jobs.html";
                 }else{
