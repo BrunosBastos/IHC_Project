@@ -340,10 +340,9 @@ $(document).ready(function() {
   localStorage.setItem("seekers", JSON.stringify(seekers));
   let recruiters =[{"name" : "Bastos e Irmãos", "email":"bastoseirmaos@gmail.com", "password":"reybastos", "address":"Rua Qualquer Coisa", "city":"Aveiro", "phone" : "932222222"}]
   localStorage.setItem("recruiters", JSON.stringify(recruiters));
-  let offers = [{"id":1,"email":"bastoseirmaos@gmail.com", "role":"Engenheiro Informático", "city":"Aveiro", "address":"Rua D. Maria", "category":"Software & Web", "jobNature":"Full-time", "salary":"1200", "vacancy":"3", "description":""}];
+  let offers = [{"id":1,"email":"bastoseirmaos@gmail.com", "date":"11/11/2011", "role":"Engenheiro Informático", "city":"Aveiro", "address":"Rua D. Maria", "category":"Software & Web", "jobNature":"Full-time", "salary":"1200", "vacancy":"3", "description":""}];
   localStorage.setItem("offers", JSON.stringify(offers))
-  //applications = [{"email": user, "id":offer, "status":Accepted,"date": data}]
-  let applications = [];
+  let applications = [{"email": "chiquito_420@sapo.pt", "id":1, "status":"Accepted", "date":"19/05/2020"}];
   localStorage.setItem("applications", JSON.stringify(applications))
   let current_user = "";
   localStorage.setItem("current_user",current_user);
