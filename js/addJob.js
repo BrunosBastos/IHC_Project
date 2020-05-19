@@ -146,11 +146,12 @@
 
             for (let i = 0; i < offers.length; i++) {
                 if (offers[i].id > id) {
-                    id = seekers[i].id;
+                    id = offers[i].id;
                 }
             }
 
-            offers.push({"id":id+1, "email":localStorage.getItem("current_user"), "role": role, "city": city, "address": address, "category": category, "jobNature": jobNature, "salary": salary, "vacancy": vancancy, "description":description})
+            var d = new Date();
+            offers.push({"id":id+1, "email":localStorage.getItem("current_user"), "date": d.getDate() + "/" + (d.getMonth()+1) + "/" + d.getFullYear(),"role": role, "city": city, "address": address, "category": category, "jobNature": jobNature, "salary": salary, "vacancy": vacancy, "description":description})
 
             localStorage.setItem("offers", JSON.stringify(offers));
 
