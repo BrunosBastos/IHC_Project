@@ -5,8 +5,6 @@ let current_profile;
 let current_job;
 let user_type;
 $(document).ready(function(){
-    
-
     seekers = JSON.parse(localStorage.getItem("seekers"));
     recruiters = JSON.parse(localStorage.getItem("recruiters"));
     current_user = localStorage.getItem("current_user");
@@ -42,24 +40,26 @@ $(document).ready(function(){
                 continue;
             }
             for(let j=0;j<seekers[i].applys.length;j++){
-                if(current_job.localeCompare(seekers[i].applys[j])){
+                if(current_job.localeCompare(seekers[i].applies[j].id)){
                     flag= true;
                 }
             }
         }
     }
-
+    // sempre a dar-lhe tenho de ir comer okok
+    //bom trabalho bro!!  
+    //mas se tivessemos o dicionario era so fazer este for aqui em cima e mudar o status para AcceptedPending Rejected oof
     if(flag){
         //meter visivel o botao de accept e de reject
     }
 
     $("#acceptButton").click(function(){
 
-        
 
 
+    });
 
-    })
-
-
-})
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    });
+});
