@@ -349,7 +349,10 @@ $(document).ready(function() {
 
   let offers = [{"id":1,"email":"bastoseirmaos@gmail.com", "date":"10/05/2020", "role":"Engenheiro Informático", "city":"Aveiro", "address":"Rua D. Maria", "category":"Software & Web", "jobNature":"Full-time", "salary":"1200", "vacancy":"3", "description":""},
       {"id":2,"email":"amaral@gmail.com", "date":"11/05/2020", "role":"Designer", "city":"Aveiro", "address":"Bairro de Santiago", "category":"Software & Web", "jobNature":"Full-time", "salary":"1100", "vacancy":"2", "description":"In need of a designer for a website"},
-      {"id":2,"email":"heinz@gmail.com", "date":"12/05/2020", "role":"Cousine Chef", "city":"Nápoles", "address":"Viale della libertà", "category":"Others", "jobNature":"Full-time", "salary":"1050", "vacancy":"1", "description":"In need of a chef for a hotel kitchen"}];
+      {"id":3,"email":"heinz@gmail.com", "date":"12/05/2020", "role":"Cousine Chef", "city":"Nápoles", "address":"Viale della libertà", "category":"Others", "jobNature":"Full-time", "salary":"1050", "vacancy":"1", "description":"In need of a chef for a hotel kitchen"},
+      {"id":4,"email":"heinz@gmail.com", "date":"12/05/2020", "role":"Secretary", "city":"Nápoles", "address":"Viale della libertà", "category":"Administration", "jobNature":"Full-time", "salary":"1500", "vacancy":"1", "description":"In need of a administrative secretary"},
+      {"id":5,"email":"amaral@gmail.com", "date":"16/05/2020", "role":"Marketing Manager", "city":"Aveiro", "address":"Bairro de Santiago", "category":"Marketing", "jobNature":"Full-time", "salary":"1100", "vacancy":"1", "description":"In need of a marketing manager"},
+      {"id":6,"email":"bastoseirmaos@gmail.com", "date":"17/05/2020", "role":"Empregada de Limpeza", "city":"Aveiro", "address":"Rua D. Maria", "category":"Others", "jobNature":"Part-time", "salary":"650", "vacancy":"1", "description":"Procura-se uma empregada de limpeza"}];
   localStorage.setItem("offers", JSON.stringify(offers))
 
   let applications = [{"email": "chiquito_420@sapo.pt", "id":1, "status":"Accepted", "date":"19/05/2020"}];
@@ -361,7 +364,5 @@ $(document).ready(function() {
   let current_offer = "";
   localStorage.setItem("current_offer",current_offer);}
 });
-
-
 
 })(jQuery);
