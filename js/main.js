@@ -336,6 +336,7 @@ mailChimp();
 
 // database send to local storage - seekers, employers, offers, applications
 $(document).ready(function() {
+  if ((localStorage.getItem("seekers")) == '') {
   let seekers = [{"name" : "Mário Chiquito da Silva", "dataNasc" : "20/04/1968", "city":"Aveiro", "address": "Avenida D. João I", "email" : "chiquito_420@sapo.pt", "password":"palavrapasse", "phoneNumber" : "910000019", "description" : "Sou o Chico e sou muito trabalhador.", "type" : ""}];
   localStorage.setItem("seekers", JSON.stringify(seekers));
   let recruiters =[{"name" : "Bastos e Irmãos", "email":"bastoseirmaos@gmail.com", "password":"reybastos", "address":"Rua Qualquer Coisa", "city":"Aveiro", "phone" : "932222222"}]
@@ -349,7 +350,7 @@ $(document).ready(function() {
   let current_profile = "";
   localStorage.setItem("current_profile",current_profile);
   let current_offer = "";
-  localStorage.setItem("current_offer",current_offer);
+  localStorage.setItem("current_offer",current_offer);}
 });
 
 

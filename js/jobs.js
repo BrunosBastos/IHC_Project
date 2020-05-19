@@ -3,7 +3,7 @@ function MyViewModel() {
     self.offers = ko.observableArray(JSON.parse(localStorage.getItem("offers")));
 
     self.goToJobDetails = function(offer) {
-        localStorage.setItem("current_offer", offer)
+        localStorage.setItem("current_offer", JSON.stringify(offer))
         window.location.href = "./job_details_seeker.html"
     }
 }
@@ -18,8 +18,6 @@ ko.applyBindings(new MyViewModel());
         $(".js-candidates").click(function(e){
             // Prevent a page reload when a link is pressed
             e.preventDefault();
-            window.location.href = "./job_details_recruiter.html&top=true"
-
 
             // Scroll
             $('html,body').animate({
