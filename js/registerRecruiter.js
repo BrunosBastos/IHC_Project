@@ -71,7 +71,7 @@ $(document).ready(function(){
           $("#RecruiterRegisterCity").addClass("is-valid");
         }
 
-        if(phone.length<3 || phone.length>15 || !isNaN(phone)){
+        if(phone.length<3 || phone.length>15 || isNaN(phone)){
           $("#RRInvalidPhone").removeClass("d-none");
           $("#RecruiterRegisterPhoneNumber").removeClass("is-valid");
           $("#RecruiterRegisterPhoneNumber").addClass("is-invalid");

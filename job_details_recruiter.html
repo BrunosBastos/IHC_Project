@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- <meta http-equiv="refresh" content="0;url=file:///C:/Users/leand/Desktop/UA/2ano/2semestre/IHC/IHC_Projeto/job_details_recruiter.html" /> -->
     <title>Slinder · Job Details</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -130,14 +131,11 @@
                                 </div>
                             </div>
                             <div class="row jobs_right">
-                                <div class="mx-1 apply_now">
-                                    <a class="heart_mark" href="#"> <i class="ti-pencil-alt"></i> </a>
+                                <div class="mx-2 apply_now">
+                                    <a class="heart_mark" href="#" title="Edit Job Offer"> <i class="ti-pencil-alt"></i> </a>
                                 </div>
-                                <div class="mx-1 apply_now">
-                                    <a class="heart_mark" href="#"> <i class="ti-trash"></i> </a>
-                                </div>
-                                <div class="mx-1 apply_now">
-                                    <a class="heart_mark" href="#"> <i class="ti-heart"></i> </a>
+                                <div class="mx-2 apply_now">
+                                    <a class="heart_mark" href="#" title="Delete Job Offer"> <i class="ti-trash"></i> </a>
                                 </div>
                             </div>
                         </div>
@@ -203,7 +201,7 @@
             </div>
         </div>
     </div>
-    <h1 class="container py-4">Candidates</h1>
+    <h1 id="candidates" class="container py-4">Candidates</h1>
     <!-- featured_candidates_area_start  -->
     <div class="featured_candidates_area candidate_page_padding">
         
@@ -445,7 +443,24 @@
 
     <script src="js/knockout.js"></script>
     <script src="js/main.js"></script>
-
+    
+    <script>
+        var change_url = false;
+        
+        $(window).on('beforeunload', function(e){
+            if (change_url) {
+                window.location.replace("./job_details_recruiter.html");
+            }
+            if (window.location.href.indexOf("candidates") >= 0) {
+                // Scroll
+                $('html,body').animate({
+                    scrollTop: $("#candidates").offset().top
+                }, 'slow');
+                change_url = true;
+            }
+        });
+        
+    </script>
     
 </body>
 

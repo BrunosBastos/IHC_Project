@@ -560,17 +560,15 @@
     <script src="js/main.js"></script>
 
     <script>
-        $(document).ready(function(){
-            $("#regist-btn").click(function(e) {
-                // Prevent a page reload when a link is pressed
-                e.preventDefault();
-                // Scroll
-                $('html,body').animate({
-                    scrollTop: $("#regist-opts").offset().top
-                }, 'slow');
-            });
-
+        $("#regist-btn").click(function(e) {
+            // Prevent a page reload when a link is pressed
+            e.preventDefault();
+            // Scroll
+            $('html,body').animate({
+                scrollTop: $("#regist-opts").offset().top
+            }, 'slow');
         });
+
     </script>
 </body>
 

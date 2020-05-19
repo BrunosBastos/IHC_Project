@@ -460,7 +460,7 @@ mailChimp();
             $("#SeekerRegisterCity").addClass("is-valid");
           }
 
-          if(phone.length<3 || phone.length>15 || !isNaN(phone)){
+          if(phone.length<3 || phone.length>15 || isNaN(phone)){
             $("#RSInvalidPhone").removeClass("d-none");
             $("#SeekerRegisterPhoneNumber").removeClass("is-valid");
             $("#SeekerRegisterPhoneNumber").addClass("is-invalid");

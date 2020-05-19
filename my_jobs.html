@@ -154,8 +154,8 @@
                                     </div>
                                     <div class="jobs_right">
                                         <div class="apply_now">
-                                            <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
-                                            <a href="job_details.html" class="boxed-btn3">Apply Now</a>
+                                            <a title="Delete Job Offer" class="heart_mark" href="#"> <i class="ti-trash"></i> </a>
+                                            <a href="#" title="Show Candidates List" class="boxed-btn3 js-candidates" style="padding: 9px 17px 9px 17px;">Show Candidates</a>
                                         </div>
                                         <div class="date">
                                             <p>Date line: 31 Jan 2020</p>
@@ -183,8 +183,8 @@
                                     </div>
                                     <div class="jobs_right">
                                         <div class="apply_now">
-                                            <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
-                                            <a href="job_details.html" class="boxed-btn3">Apply Now</a>
+                                            <a title="Delete Job Offer" class="heart_mark" href="#"> <i class="ti-trash"></i> </a>
+                                            <a href="#" title="Show Candidates List" class="boxed-btn3 js-candidates" style="padding: 9px 17px 9px 17px;">Show Candidates</a>
                                         </div>
                                         <div class="date">
                                             <p>Date line: 31 Jan 2020</p>
@@ -212,8 +212,8 @@
                                     </div>
                                     <div class="jobs_right">
                                         <div class="apply_now">
-                                            <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
-                                            <a href="job_details.html" class="boxed-btn3">Apply Now</a>
+                                            <a title="Delete Job Offer" class="heart_mark" href="#"> <i class="ti-trash"></i> </a>
+                                            <a href="#" title="Show Candidates List" class="boxed-btn3 js-candidates" style="padding: 9px 17px 9px 17px;">Show Candidates</a>
                                         </div>
                                         <div class="date">
                                             <p>Date line: 31 Jan 2020</p>
@@ -242,8 +242,8 @@
                                     </div>
                                     <div class="jobs_right">
                                         <div class="apply_now">
-                                            <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
-                                            <a href="job_details.html" class="boxed-btn3">Apply Now</a>
+                                            <a title="Delete Job Offer" class="heart_mark" href="#"> <i class="ti-trash"></i> </a>
+                                            <a href="#" title="Show Candidates List" class="boxed-btn3 js-candidates" style="padding: 9px 17px 9px 17px;">Show Candidates</a>
                                         </div>
                                         <div class="date">
                                             <p>Date line: 31 Jan 2020</p>
@@ -271,8 +271,8 @@
                                     </div>
                                     <div class="jobs_right">
                                         <div class="apply_now">
-                                            <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
-                                            <a href="job_details.html" class="boxed-btn3">Apply Now</a>
+                                            <a title="Delete Job Offer" class="heart_mark" href="#"> <i class="ti-trash"></i> </a>
+                                            <a href="#" title="Show Candidates List" class="boxed-btn3 js-candidates" style="padding: 9px 17px 9px 17px;">Show Candidates</a>
                                         </div>
                                         <div class="date">
                                             <p>Date line: 31 Jan 2020</p>
@@ -300,8 +300,8 @@
                                     </div>
                                     <div class="jobs_right">
                                         <div class="apply_now">
-                                            <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
-                                            <a href="job_details.html" class="boxed-btn3">Apply Now</a>
+                                            <a title="Delete Job Offer" class="heart_mark" href="#"> <i class="ti-trash"></i> </a>
+                                            <a href="#" title="Show Candidates List" class="boxed-btn3 js-candidates" style="padding: 9px 17px 9px 17px;">Show Candidates</a>
                                         </div>
                                         <div class="date">
                                             <p>Date line: 31 Jan 2020</p>
@@ -441,22 +441,14 @@
     <script src="js/knockout.js"></script>
     <script src="js/main.js"></script>
 
-
-	<script>
-        $( function() {
-            $( "#slider-range" ).slider({
-                range: true,
-                min: 0,
-                max: 24600,
-                values: [ 750, 24600 ],
-                slide: function( event, ui ) {
-                    $( "#amount" ).val(ui.values[ 0 ] + "€ - " + ui.values[ 1 ] + "€/ Year" );
-                }
-            });
-            $( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 ) +
-                "€ - " + $( "#slider-range" ).slider( "values", 1 ) + "€/ Year");
-        } );
-        </script>
+    <script>
+         $(".js-candidates").click(function(e){
+            // Prevent a page reload when a link is pressed
+            e.preventDefault();
+            
+            window.location.href = "./job_details_recruiter.html#candidates";
+        });
+    </script>
 </body>
 
 </html>

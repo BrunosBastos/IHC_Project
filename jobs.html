@@ -202,7 +202,7 @@
                                     </div>
                                     <div class="jobs_right">
                                         <div class="apply_now">
-                                            <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
+                                            <a class="heart_mark" href="#"> <i class="ti-heart"></i> </a>
                                             <a href="job_details.html" class="boxed-btn3">Apply Now</a>
                                         </div>
                                         <div class="date">
@@ -231,7 +231,7 @@
                                     </div>
                                     <div class="jobs_right">
                                         <div class="apply_now">
-                                            <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
+                                            <a class="heart_mark" href="#"> <i class="ti-heart"></i> </a>
                                             <a href="job_details.html" class="boxed-btn3">Apply Now</a>
                                         </div>
                                         <div class="date">
@@ -260,7 +260,7 @@
                                     </div>
                                     <div class="jobs_right">
                                         <div class="apply_now">
-                                            <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
+                                            <a class="heart_mark" href="#"> <i class="ti-heart"></i> </a>
                                             <a href="job_details.html" class="boxed-btn3">Apply Now</a>
                                         </div>
                                         <div class="date">
@@ -290,7 +290,7 @@
                                     </div>
                                     <div class="jobs_right">
                                         <div class="apply_now">
-                                            <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
+                                            <a class="heart_mark" href="#"> <i class="ti-heart"></i> </a>
                                             <a href="job_details.html" class="boxed-btn3">Apply Now</a>
                                         </div>
                                         <div class="date">
@@ -319,7 +319,7 @@
                                     </div>
                                     <div class="jobs_right">
                                         <div class="apply_now">
-                                            <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
+                                            <a class="heart_mark" href="#"> <i class="ti-heart"></i> </a>
                                             <a href="job_details.html" class="boxed-btn3">Apply Now</a>
                                         </div>
                                         <div class="date">
@@ -348,7 +348,7 @@
                                     </div>
                                     <div class="jobs_right">
                                         <div class="apply_now">
-                                            <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
+                                            <a class="heart_mark" href="#"> <i class="ti-heart"></i> </a>
                                             <a href="job_details.html" class="boxed-btn3">Apply Now</a>
                                         </div>
                                         <div class="date">
@@ -504,7 +504,14 @@
             $( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 ) +
                 "€ - " + $( "#slider-range" ).slider( "values", 1 ) + "€/ Year");
         } );
-        </script>
+
+        $(".heart_mark").click(function(e) {
+            e.preventDefault();
+            var icon = $(this).children();
+            icon.toggleClass("ti-heart");
+            icon.toggleClass("fa fa-heart");
+        });
+    </script>
 </body>
 
 </html>

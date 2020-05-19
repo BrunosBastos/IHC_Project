@@ -350,6 +350,17 @@
 
     <script src="js/knockout.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $(".heart_mark").click(function(e) {
+                e.preventDefault();
+                var icon = $(this).children();
+                icon.toggleClass("ti-heart");
+                icon.toggleClass("fa fa-heart");
+            });
+        });
+    </script>
 </body>
 
 </html>
