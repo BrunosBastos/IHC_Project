@@ -3296,7 +3296,7 @@ h3 {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  padding: 15px;
+  /* padding: 15px; */
   background: #F5F7FA;
   margin-right: 25px;
   border: 1px solid #F0F0F0;
@@ -3755,7 +3755,7 @@ h3 {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  padding: 15px;
+  /* padding: 15px; */
   background: #F5F7FA;
   margin-right: 25px;
   border: 1px solid #F0F0F0;
@@ -3901,7 +3901,7 @@ h3 {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  padding: 15px;
+  /* padding: 15px; */
   background: #F5F7FA;
   margin-right: 25px;
   border: 1px solid #F0F0F0;
@@ -4581,13 +4581,14 @@ h6 {
 /* line 146, ../../Arafath/CL/December/235. Job board/HTML/scss/_elements.scss */
 .button-group-area .genric-btn {
   margin-right: 10px;
+  margin-left: 10px;
   margin-top: 10px;
 }
 
 /* line 149, ../../Arafath/CL/December/235. Job board/HTML/scss/_elements.scss */
-.button-group-area .genric-btn:last-child {
+/* .button-group-area .genric-btn:last-child {
   margin-right: 0;
-}
+} */
 
 /* line 155, ../../Arafath/CL/December/235. Job board/HTML/scss/_elements.scss */
 .genric-btn {
@@ -7475,4 +7476,10 @@ h6 {
 .disabled {
   pointer-events: none;
   opacity: 0.3;
+}
+
+.thumb img {
+  width: 82px;
+  height: 82px;
+  object-fit: fill;
 }
