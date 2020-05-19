@@ -6,8 +6,6 @@ let current_profile;
 let current_job;
 let user_type;
 $(document).ready(function(){
-    
-
     seekers = JSON.parse(localStorage.getItem("seekers"));
     recruiters = JSON.parse(localStorage.getItem("recruiters"));
     apllications = JSON.parse(localStorage.getItem("applications"));
@@ -80,7 +78,10 @@ $(document).ready(function(){
 
 
 
-    })
 
+    });
 
-})
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    });
+});
