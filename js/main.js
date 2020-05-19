@@ -336,7 +336,8 @@ mailChimp();
 
 // database send to local storage - seekers, employers, offers, applications
 $(document).ready(function() {
-  if ((localStorage.getItem("seekers")).localeCompare('')) {
+  console.log()
+  if ((localStorage.getItem("seekers")) === null) {
   let seekers = [{"educationLevel":"Master’s Degree","name" : "Lionel Messi", "dataNasc" : "20/04/1990", "city":"Barcelona", "address": "Rua de la Paz", "email" : "messi@gmail.com", "password":"passpass", "phoneNumber" : "910000019", "description" : "Sou jogador profissional de futebol", "type" : "Marketing"},
       {"educationLevel": "High School Diploma or Equivalent","name":"Leonardo Lenny", "dataNasc":"25/05/1976", "city":"Nápoles", "address":"Viale della libertà", "email":"lenny@gmail.com", "password":"passpass", "phoneNumber":"923456789", "description":"- Experient in cooking", "type":"Others"},
       {"educationLevel": "Bachelor’s Degree", "name":"Leandro Silva", "dataNasc":"26/06/2000", "city":"Aveiro", "address":"Rua D. Joana", "email":"leandro@gmail.com", "password":"passpass", "phoneNumber":"929876543", "description":"degree in computer science", "type":"Software & Web"}];
