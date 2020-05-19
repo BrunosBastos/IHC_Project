@@ -171,7 +171,7 @@
         }
       }
 
-      var user = { "name": name, "dataNasc": day + "/" + month + "/" + year, "city": city, "address": address, "email": email, "password": password, "phoneNumber": phone, "description": "", "category": type }
+      var user = {"educationLevel":education, "name": name, "dataNasc": day + "/" + month + "/" + year, "city": city, "address": address, "email": email, "password": password, "phoneNumber": phone, "description": "", "category": type }
       seekers.push(user)
       localStorage.setItem("current_user", user)
 
