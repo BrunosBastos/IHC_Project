@@ -342,6 +342,7 @@ $(document).ready(function() {
   localStorage.setItem("recruiters", JSON.stringify(recruiters));
   let offers = [{"id":1,"email":"bastoseirmaos@gmail.com", "role":"Engenheiro Informático", "city":"Aveiro", "address":"Rua D. Maria", "category":"Software & Web", "jobNature":"Full-time", "salary":"1200", "vacancy":"3", "description":""}];
   localStorage.setItem("offers", JSON.stringify(offers))
+  //applications = [{"email": user, "id":offer, "status":Accepted,"date": data}]
   let applications = [];
   localStorage.setItem("applications", JSON.stringify(applications))
   let current_user = "";
