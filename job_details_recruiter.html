@@ -110,7 +110,7 @@
     <div class="job_details_area">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
+                <div class="col-lg-10">
                     <div class="job_details_header">
                         <div class="single_jobs white-bg d-flex justify-content-between">
                             <div class="jobs_left d-flex align-items-center">
@@ -131,25 +131,33 @@
                             </div>
                             <div class="row jobs_right">
                                 <div class="mx-2 apply_now">
-                                    <a class="heart_mark" href="#" title="Edit Job Offer"> <i class="ti-pencil-alt"></i> </a>
+                                    <a class="heart_mark" href="#" data-toggle="tooltip" data-placement="top" title="Edit Job Offer"> <i class="ti-pencil-alt"></i> </a>
                                 </div>
                                 <div class="mx-2 apply_now">
-                                    <a class="heart_mark" href="#" title="Delete Job Offer"> <i class="ti-trash"></i> </a>
+                                    <a class="heart_mark" href="#" data-toggle="tooltip" data-placement="top" title="Delete Job Offer"> <i class="ti-trash"></i> </a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
                     <div class="descript_wrap white-bg">
-                        <div class="single_wrap">
-                            <ul>
-                                <li>Published on: <span data-bind="text:date"></span></li>
-                                <li>Vacancy: <span data-bind="text_vacancy"></span></li>
-                                <li>Salary: <span data-bind="text:salary"></span></li>
-                                <li>Location: <span data-bind="text:city"></span></li>
-                                <li>Job Nature: <span data-bind="text:jobNature"></span></li>
-                            </ul>
-                            <h4 data-bind="visible:isDesc">Job description:</h4>
-                            <p data-bind="text:description"></p>
+                        <div class="single_wrap row">
+                            <div class="job_sumary col-sm-12 col-md-6">
+                                <div class="job_content" style="padding: 0;">
+                                    <h4 >Job summary:</h4>
+                                    <ul>
+                                        <li>Published on: <span data-bind="text:date"></span></li>
+                                        <li>Vacancy: <span data-bind="text_vacancy"></span></li>
+                                        <li>Salary: <span data-bind="text:salary"></span></li>
+                                        <li>Location: <span data-bind="text:city"></span></li>
+                                        <li>Job Nature: <span data-bind="text:jobNature"></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="job_sumary col-sm-12 col-md-6">
+                                <h4 data-bind="visible:isDesc">Job description:</h4>
+                                <p data-bind="text:description"></p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -262,71 +270,23 @@
     <footer class="footer">
         <div class="footer_top">
             <div class="container">
-                <div class="row">
-                    <div class="col-xl-6 col-md-8 col-lg-4">
+                <div class="row justify-content-left">
+                    <div class="col-xl-6 col-md-6">
                         <div class="footer_widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                             <div class="footer_logo">
                                 <a href="#">
                                     <img src="img/logo.png" alt="">
                                 </a>
                             </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-md-6">
+                        <div class="footer_widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                             <p>
                                 slinder@support.com <br>
                                 +351 255 255 255 <br>
-                                600/D, Green road, NewYork
+                                Av. 25 de Abril, 3811-901 Aveiro
                             </p>
-                            <div class="socail_links disabled">
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <i class="ti-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-google-plus"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-8 col-lg-3">
-                        <div class="footer_widget wow fadeInUp" data-wow-duration="1.1s" data-wow-delay=".4s">
-                            <h3 class="footer_title">
-                                Company
-                            </h3>
-                            <ul>
-                                <li><a href="#">About </a></li>
-                                <li><a href="#"> Pricing</a></li>
-                                <li><a href="#">Carrier Tips</a></li>
-                                <li><a href="#">FAQ</a></li>
-                            </ul>
-
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-8 col-lg-4">
-                        <div class="footer_widget wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s">
-                            <h3 class="footer_title">
-                                Category
-                            </h3>
-                            <ul>
-                                <li><a href="#">Design & Art</a></li>
-                                <li><a href="#">Engineering</a></li>
-                                <li><a href="#">Sales & Marketing</a></li>
-                                <li><a href="#">Finance</a></li>
-                            </ul>
                         </div>
                     </div>
                 </div>
