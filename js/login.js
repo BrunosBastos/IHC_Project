@@ -38,7 +38,7 @@ $(document).ready(function (){
             }
 
         }else{
-            //invalid user or password
+            $("#PInvalidLogin").removeClass("d-none");
             console.log("Not working");
 
         }

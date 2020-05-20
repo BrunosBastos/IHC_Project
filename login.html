@@ -70,6 +70,7 @@
                                   <div class="form-group col-md-6">
                                     <label for="loginEmail">Email</label>
                                     <input type="email" class="form-control" id="loginEmail" placeholder="Email">
+                                    
                                   </div>
                                 </div>
                                 <div class="form-row">
@@ -78,10 +79,14 @@
                                     <input type="password" class="form-control" id="loginPassword" placeholder="Password">
                                   </div>
                                 </div>
-                                <div class="form-row col-md-6">
+                                <div class="form-row col-md-6">        
+                                    <div id="PPInvalidLogin" class="d-none invalid-feedback ">
+                                        Incorrect Email or Password.
+                                    </div>                           
                                     <div class="form-group">
                                         <button type="button" id="loginbutton" class="btn btn-primary">Login</button>
                                     </div>
+
                                 </div>  
                               </form>
                         </div>
