@@ -40,35 +40,21 @@ let current_profile;
 let current_job;
 let user_type;
 $(document).ready(function () {
+
     seekers = JSON.parse(localStorage.getItem("seekers"));
     recruiters = JSON.parse(localStorage.getItem("recruiters"));
-    applications = JSON.parse(localStorage.getItem("applications"));
     current_user = localStorage.getItem("current_user");
-    current_profile = localStorage.getItem("current_profile")
-    if (current_profile.length == 0) {
-        $("#rejectButton").hide()
-        $("#acceptButton").hide()
-        $("#headerProf").text("Your Account")
-        var seekers = JSON.parse(localStorage.getItem("seekers"))
-        for (i = 0; i < seekers.length; i++) {
-            if (seekers[i].email.localeCompare(current_user)) {
-                current_profile = seekers[i]
-                break;
-            }
-        }
-    } else {
-        $("#editProfileButton").hide()
-        current_profile = JSON.parse(current_profile)
-        current_job = JSON.parse(localStorage.getItem("current_offer"));
-        $("#headerProf").text(current_job.role)
-    }
-    vm.setProfile(current_profile)
+    applications = JSON.parse(localStorage.getItem("applications"));
 
-    /*
     // sees if the user seeing the profile is a seeker
     for (let i = 0; i < seekers.length; i++) {
         if (current_user.localeCompare(seekers[i].email) == 0) {
             user_type = "seeker";
+            $("#rejectButton").hide()
+            $("#acceptButton").hide()
+            $("#headerProf").text("Your Account")
+            current_profile = seekers[i]
+            break
         }
     }
 
@@ -77,11 +63,17 @@ $(document).ready(function () {
         for (let i = 0; i < recruiters.length; i++) {
             if (current_user.localeCompare(recruiters[i].email) == 0) {
                 user_type = "recruiter";
+                $("#editProfileButton").hide()
+                current_profile = JSON.parse(localStorage.getItem("current_profile"))
+                current_job = JSON.parse(localStorage.getItem("current_offer"));
+                $("#headerProf").text(current_job.role)
             }
         }
     } else {
         //console.log("wtf")
-    }*/
+    }
+
+    vm.setProfile(current_profile)
 
     for (let i = 0; i < applications.length; i++) {
         if (applications[i].email.localeCompare(current_profile.email) == 0 && applications[i].id == current_job.id) {
