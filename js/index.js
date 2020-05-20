@@ -1,4 +1,3 @@
-
 function MyViewModel() {
     // database send to local storage - seekers, employers, offers, applications
     if ((localStorage.getItem("seekers")) === null) {
@@ -21,7 +20,7 @@ function MyViewModel() {
           {"id":6,"email":"bastoseirmaos@gmail.com", "date":"17/05/2020", "role":"Empregada de Limpeza", "city":"Aveiro", "address":"Rua D. Maria", "category":"Others", "jobNature":"Part-time", "salary":"650", "vacancy":"1", "description":"Procura-se uma empregada de limpeza"}];
       localStorage.setItem("offers", JSON.stringify(offers))
     
-      let applications = [{"email": "chiquito_420@sapo.pt", "id":1, "status":"Accepted", "date":"19/05/2020"}];
+      let applications = [{"email": "leandro@gmail.com", "id":1, "status":"A", "date":"19/05/2020"}];
       localStorage.setItem("applications", JSON.stringify(applications))
       let current_user = "";
       localStorage.setItem("current_user",current_user);
