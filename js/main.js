@@ -20,6 +20,9 @@ $(window).on('scroll', function () {
 
 
 $(document).ready(function(){
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
 
 // mobile_menu
 var menu = $('ul#navigation');
