@@ -14,6 +14,11 @@ function MyViewModel() {
     self.vacancy = ko.observable(self.offer().vacancy)
     self.description = ko.observable(self.offer().description)
     self.isDesc = ko.observable(self.description().localeCompare(''))
+
+    self.candidateDetails = function() {
+        localStorage.setItem("current_profile", JSON.stringify({"educationLevel": "High School Diploma or Equivalent","name":"Leonardo Lenny", "dataNasc":"25/05/1976", "city":"Nápoles", "address":"Viale della libertà", "email":"lenny@gmail.com", "password":"passpass", "phoneNumber":"923456789", "description":"- Experient in cooking", "type":"Others"}))
+        window.location.href = "./profile.html"
+    }
 }
 ko.applyBindings(new MyViewModel());
 
