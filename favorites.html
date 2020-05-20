@@ -178,7 +178,7 @@
                                             <img src="img/svg_icon/1.svg" alt="">
                                         </div>
                                         <div class="jobs_conetent">
-                                            <a href="job_details.html"><h4 data-bind="text:role"></h4></a>
+                                            <a href="job_details.html" data-bind="click:$parent.goToJobDetails"><h4 data-bind="text:role"></h4></a>
                                             <div class="links_locat d-flex align-items-center">
                                                 <div class="location">
                                                     <p> <i class="fa fa-map-marker"></i><span data-bind="text:city"></span></p>
@@ -195,10 +195,10 @@
                                             <a title="Show Candidates List" class="boxed-btn3 js-candidates" style="padding: 9px 17px 9px 17px;" data-bind="click: $parent.goToJobDetails">View Details</a>
                                         </div>
                                         <div class="date">
-                                            <p data-bind="text:date">Data</p>
+                                            <p>Date line: <span data-bind="text:date"></span></p>
                                         </div>
                                         <div class="date">
-                                            <p >Accept,reject,pending,Unapplied</p>
+                                            <p data-bind="text:$parent.status($data)"></p>
                                         </div>
                                     </div>
                                 </div>
@@ -210,7 +210,6 @@
                                     <ul>
                                         <li><a href="#"> <i class="ti-angle-left"></i> </a></li>
                                         <li><a href="#"><span>01</span></a></li>
-                                        <li><a href="#"><span>02</span></a></li>
                                         <li><a href="#"> <i class="ti-angle-right"></i> </a></li>
                                     </ul>
                                 </div>
@@ -376,7 +375,7 @@
 
     <script src="js/knockout.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/profile.js"></script>
+    <script src="js/favorites.js"></script>
 
     <style>
         .textarea {
