@@ -2535,7 +2535,7 @@ h3 {
 
 /* line 19, ../../Arafath/CL/December/235. Job board/HTML/scss/_bradcam.scss */
 .bradcam_area h3 {
-  margin-left: 10px;
+  margin-left: 0px;
   font-size: 50px;
   color: #fff;
   font-weight: 400;
@@ -7473,7 +7473,7 @@ h6 {
   opacity: 0.3;
 }
 
-.thumb img {
+.jobs_left .thumb img {
   width: 82px;
   height: 82px;
   object-fit: fill;

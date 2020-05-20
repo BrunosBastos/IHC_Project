@@ -3,7 +3,7 @@ function MyViewModel() {
     self.originOffers = ko.observableArray(JSON.parse(localStorage.getItem("offers")));
     self.offers = ko.observableArray();
     for (i=0; i< self.originOffers().length; i++) {
-        if (self.originOffers()[i].email.localeCompare(localStorage.getItem("current_user"))) {
+        if (self.originOffers()[i].email.localeCompare(localStorage.getItem("current_user"))==0) {
             console.log(self.originOffers()[i])
             self.offers().push(self.originOffers()[i])
         }

@@ -234,88 +234,43 @@
                 <div class="modal-body">
                     <form>
                         <div class="form-row">
-                          <div class="form-group col-md-7">
-                            <label for="SeekerRegisterEmail">Email</label>
-                            <input type="email" class="form-control " id="SeekerRegisterEmail">
-                            <div id="RSInvalidEmail" class="invalid-feedback d-none">
-                                Invalid email.
+                            <div class="form-group offset-xs-3 offset-sm-0 col-xs-6 col-sm-auto">
+                                <div class="form-group job_details_area mt-4" style="background: none;padding: 0;">
+                                    <div class="single_jobs" style="border: none;padding: 0">
+                                        <div class="jobs_left ">
+                                            <div class="thumb">
+                                                <img src="img/candiateds/1.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                          </div>
-                          <div class="form-group col-md-5">
-                            <label for="SeekerRegisterPassword">Password</label>
-                            <input type="password" class="form-control " id="SeekerRegisterPassword">
-                            <div id="RSInvalidPassword" class="invalid-feedback d-none">
-                                Invalid password length.
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="SeekerRegisterName">Name</label>
-                            <input type="text" class="form-control " id="SeekerRegisterName">
-                            <div id="RSInvalidName" class="invalid-feedback d-none">
-                                Invalid name.
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="SeekerRegisterProfessionalCategory">Professinal Category</label>
-                            <input list=category type="text" class="form-control" id="SeekerRegisterProfessionalCategory" placeholder="ex: Design">
-                            <datalist id=category>
-                                <option value="Design & Creative"></option>
-                                <option value="Marketing"></option>
-                                <option value="Telemarketing"></option>
-                                <option value="Software & Web"></option>
-                                <option value="Administration"></option>
-                                <option value="Teaching & Education"></option>
-                                <option value="Engineering"></option>
-                                <option value="Garments / Textile"></option>
-                            </datalist>
-                            <div id="RSInvalidCategory" class="invalid-feedback d-none">
-                                Invalid Professional Category.
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="SeekerRegisterEducation">Education Level</label>
-                            <input list=education type="text" class="form-control" id="SeekerRegisterEducation" placeholder="ex: High School">
-                            <datalist id=education>
-                                <option value="Less Than High School"></option>
-                                <option value="High School Diploma or Equivalent"></option>
-                                <option value="Some College, No Degree"></option>
-                                <option value="Associate’s Degree"></option>
-                                <option value="Bachelor’s Degree"></option>
-                                <option value="Postsecondary Non-Degree Award"></option>
-                                <option value="Master’s Degree"></option>
-                                <option value="Doctoral or Professional Degree"></option>
-                            </datalist>
-                            <div id="RSInvalidEducation" class="invalid-feedback d-none">
-                                Invalid Education Level.
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="SeekerRegisterAddress">Address</label>
-                            <input type="text" class="form-control" id="SeekerRegisterAddress" placeholder="ex: 86 Rua da Granja">
-                            <div id="RSInvalidAddress" class="invalid-feedback d-none">
-                                Invalid address.
+                            <div class="form-group col-xs-12 col">
+                                <div class="form-group">
+                                    <label for="SeekerRegisterEmail">Email</label>
+                                    <input type="email" class="form-control " id="SeekerRegisterEmail">
+                                    <div id="RSInvalidEmail" class="invalid-feedback d-none">
+                                        Invalid email.
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="SeekerRegisterPassword">Password</label>
+                                    <input type="password" class="form-control " id="SeekerRegisterPassword">
+                                    <div id="RSInvalidPassword" class="invalid-feedback d-none">
+                                        Invalid password length.
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="form-row">
-                          <div class="form-group col-md-7">
-                            <label for="SeekerRegisterCity">City</label>
-                            <input type="text" class="form-control" id="SeekerRegisterCity" placeholder="ex: Aveiro">
-                            <div id="RSInvalidCity" class="invalid-feedback d-none">
-                                Invalid City.
+                            <div class="form-group col">
+                                <label for="SeekerRegisterName">Name</label>
+                                <input type="text" class="form-control " id="SeekerRegisterName">
+                                <div id="RSInvalidName" class="invalid-feedback d-none">
+                                    Invalid name.
+                                </div>
                             </div>
-                          </div>
-                          <div class="form-group col-md-5">
-                            <label for="SeekerRegisterPhoneNumber">Phone</label>
-                            <input type="text" class="form-control" id="SeekerRegisterPhoneNumber">
-                            <div  id="RSInvalidPhone" class="invalid-feedback d-none">
-                                Invalid Phone number.
-                            </div>
-                          </div>
-                            
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-sm-8 col-md-12 col-lg-8">
+                            <div class="form-group col-xs-12 col-sm-5">
                                 <label for="SeekerRegisterYear">Birth Date</label>
                                 <div class="input-group">
                                     <input type="text" placeholder="YYYY" class="form-control" id="SeekerRegisterYear">
@@ -325,11 +280,73 @@
                                         Invalid Birth Date.
                                     </div>
                                 </div>
-                               
-                                
                             </div>
-                        </div>    
+                        </div>
                         
+                        <div class="form-row">
+                            <div class="form-group col-xs-12 col-sm-6">
+                                <label for="SeekerRegisterProfessionalCategory">Professinal Category</label>
+                                <input list=category type="text" class="form-control" id="SeekerRegisterProfessionalCategory" placeholder="ex: Design">
+                                <datalist id=category>
+                                    <option value="Design & Creative"></option>
+                                    <option value="Marketing"></option>
+                                    <option value="Telemarketing"></option>
+                                    <option value="Software & Web"></option>
+                                    <option value="Administration"></option>
+                                    <option value="Teaching & Education"></option>
+                                    <option value="Engineering"></option>
+                                    <option value="Garments / Textile"></option>
+                                </datalist>
+                                <div id="RSInvalidCategory" class="invalid-feedback d-none">
+                                    Invalid Professional Category.
+                                </div>
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-6">
+                                <label for="SeekerRegisterEducation">Education Level</label>
+                                <input list=education type="text" class="form-control" id="SeekerRegisterEducation" placeholder="ex: High School">
+                                <datalist id=education>
+                                    <option value="Less Than High School"></option>
+                                    <option value="High School Diploma or Equivalent"></option>
+                                    <option value="Some College, No Degree"></option>
+                                    <option value="Associate’s Degree"></option>
+                                    <option value="Bachelor’s Degree"></option>
+                                    <option value="Postsecondary Non-Degree Award"></option>
+                                    <option value="Master’s Degree"></option>
+                                    <option value="Doctoral or Professional Degree"></option>
+                                </datalist>
+                                <div id="RSInvalidEducation" class="invalid-feedback d-none">
+                                    Invalid Education Level.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-xs-12 col-sm-3">
+                                <label for="SeekerRegisterCity">City</label>
+                                <input type="text" class="form-control" id="SeekerRegisterCity" placeholder="ex: Aveiro">
+                                <div id="RSInvalidCity" class="invalid-feedback d-none">
+                                    Invalid City.
+                                </div>
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-5">
+                                <label for="SeekerRegisterAddress">Address</label>
+                                <input type="text" class="form-control" id="SeekerRegisterAddress" placeholder="ex: 86 Rua da Granja">
+                                <div id="RSInvalidAddress" class="invalid-feedback d-none">
+                                    Invalid address.
+                                </div>
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-4">
+                                <label for="SeekerRegisterPhoneNumber">Phone</label>
+                                <input type="text" class="form-control" id="SeekerRegisterPhoneNumber">
+                                <div  id="RSInvalidPhone" class="invalid-feedback d-none">
+                                    Invalid Phone number.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="CreateJobDescription">Description</label>
+                            <span class="textarea form-control" role="textbox" contenteditable></span>
+                            </textarea>
+                        </div> 
                       </form>
                 </div>
                 <div class="modal-footer">
@@ -450,6 +467,17 @@
     <script src="js/knockout.js"></script>
     <script src="js/main.js"></script>
     <script src="js/profile.js"></script>
+
+    <style>
+        .textarea {
+            display: block;
+            width: 100%;
+            overflow: hidden;
+            resize: none;
+            min-height: 40px;
+            line-height: 20px;
+        }
+    </style>
 
 </body>
 
