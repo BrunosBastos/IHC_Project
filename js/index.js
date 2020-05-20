@@ -6,10 +6,10 @@ function MyViewModel() {
           {"educationLevel": "Bachelor’s Degree", "name":"Leandro Silva", "dataNasc":"26/06/2000", "city":"Aveiro", "address":"Rua D. Joana", "email":"leandro@gmail.com", "password":"passpass", "phoneNumber":"929876543", "description":"degree in computer science", "type":"Software & Web"}];
       localStorage.setItem("seekers", JSON.stringify(seekers));
     
-      let recruiters =[{"name" : "Bastos e Irmãos", "email":"bastoseirmaos@gmail.com", "password":"passpass", "address":"Rua D. Ana", "city":"Aveiro", "phone" : "932222222"},
-          {"name" : "Amaral Limitada", "email":"amaral@gmail.com", "password":"passpass", "address":"Avenida da Liberdade", "city":"Aveiro", "phone" : "932255552"},
-          {"name":"Heinz Group", "email":"heinz@gmail.com", "password":"passpass", "address":"Viale della libertà", "city":"Nápoles", "phone":"961234589"},
-          {"name":"Slinder", "email":"slinder@gmail.com", "password":"passpass", "address":"Avenida da Universidade", "city":"Aveiro", "phone":"961254389"}]
+      let recruiters =[{"description":"", "name" : "Bastos e Irmãos", "email":"bastoseirmaos@gmail.com", "password":"passpass", "address":"Rua D. Ana", "city":"Aveiro", "phone" : "932222222"},
+          {"description":"", "name" : "Amaral Limitada", "email":"amaral@gmail.com", "password":"passpass", "address":"Avenida da Liberdade", "city":"Aveiro", "phone" : "932255552"},
+          {"description":"", "name":"Heinz Group", "email":"heinz@gmail.com", "password":"passpass", "address":"Viale della libertà", "city":"Nápoles", "phone":"961234589"},
+          {"description":"", "name":"Slinder", "email":"slinder@gmail.com", "password":"passpass", "address":"Avenida da Universidade", "city":"Aveiro", "phone":"961254389"}]
       localStorage.setItem("recruiters", JSON.stringify(recruiters));
     
       let offers = [{"id":1,"email":"bastoseirmaos@gmail.com", "date":"10/05/2020", "role":"Engenheiro Informático", "city":"Aveiro", "address":"Rua D. Maria", "category":"Software & Web", "jobNature":"Full-time", "salary":"1200", "vacancy":"3", "description":""},
