@@ -19,9 +19,12 @@ ko.applyBindings(new MyViewModel());
 
 (function ($) {
     $(document).ready(function(){
-        var scroll2candidates;
-
         //if ()
+        $("#sort-order").click(function(){
+            $("#sort-order").children().toggleClass("ti-angle-down");
+            $("#sort-order").children().toggleClass("ti-angle-up");
+        });
+
 
         $(".js-candidates").click(function(e){
             // Prevent a page reload when a link is pressed

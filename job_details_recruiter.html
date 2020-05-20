@@ -53,6 +53,7 @@
                                         <ul id="navigation">
                                             <li><a href="index.html">home</a></li>
                                             <li><a href="jobs.html">Browse Job</a></li>
+                                            <li><a class="boxed-btn3" href="#">Post a Job</a></li>
                                             <li><a href="#">pages <i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
                                                     <li><a href="candidate.html">Candidates </a></li>
@@ -147,7 +148,7 @@
                                     <h4 >Job summary:</h4>
                                     <ul>
                                         <li>Published on: <span data-bind="text:date"></span></li>
-                                        <li>Vacancy: <span data-bind="text_vacancy"></span></li>
+                                        <li>Vacancy: <span data-bind="text:vacancy"></span></li>
                                         <li>Salary: <span data-bind="text:salary"></span></li>
                                         <li>Location: <span data-bind="text:city"></span></li>
                                         <li>Job Nature: <span data-bind="text:jobNature"></span></li>
@@ -164,7 +165,31 @@
             </div>
         </div>
     </div>
-    <h1 id="candidates" class="container py-4">Candidates</h1>
+    <div class="container">
+        <div class="row py-4">
+            <div class="custom_title col">
+                <h3 id="candidates" style="color: black;">Candidates</h1>
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-0"></div>
+            <div class="col-xs-6 col-sm-4 col-md-3">
+                <div class="single_field">
+                    <select class="wide">
+                        <option data-display="Category">Category</option>
+                        <option value="1">Candidate Age</option>
+                        <option value="2">Apply Date</option>
+                        <option value="3">Category</option>
+                        <option value="4">Education Level</option>
+                    </select>
+                    
+                </div>
+            </div>
+            <div class="col-auto" style="padding: 0 1rem 0 0">
+                
+                <button id="sort-order" class="btn btn-default"><i class="ti-angle-down"></i></button>
+            </div>
+        </div>
+    </div>
+    
     <!-- featured_candidates_area_start  -->
     <div class="featured_candidates_area candidate_page_padding">
         
