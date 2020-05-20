@@ -12,7 +12,7 @@ function MyViewModel() {
 
     self.goToJobDetails = function(offer) {
         localStorage.setItem("current_offer", JSON.stringify(offer))
-        window.location.href = "./job_details_recruiter.html"
+        window.location.href = "./job_details_recruiter.html#candidates"
     }
 }
 ko.applyBindings(new MyViewModel());
