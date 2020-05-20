@@ -119,13 +119,13 @@
                                 </div>
                                 <div class="jobs_conetent">
                                     
-                                        <h4>Nome Completo</h4>
+                                        <h4 data-bind="text:name"></h4>
                                     <div class="links_locat d-flex align-items-center">
                                         <div class="location">
-                                            <p> <i class="fa fa-map-marker"></i> City</p>
+                                            <p> <i class="fa fa-map-marker"></i> <span data-bind="text:city"></span></p>
                                         </div>
                                         <div class="location">
-                                            <p> <i class="fa fa-briefcase"></i> Category</p>
+                                            <p> <i class="fa fa-briefcase"></i> <span data-bind="text:type"></span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -141,57 +141,37 @@
 
                         <div class="job_content">
                             <lable>Email : </lable>
-                            <p>Chiquito_420@sapo.pt</p>
+                            <p data-bind="text:email"></p>
                         
                             <lable>Phone : </lable>
-                            <p>969696969</p>
+                            <p data-bind="text:phoneNumber"></p>
                         
                             <lable>Category : </lable>
-                                <p>Category</p>
+                                <p data-bind="text:type"></p>
                         
                             <lable>Education Level : </lable>
-                                <p>Degree</p>
+                                <p data-bind="text:educationLevel"></p>
                         
                             <lable>Birth Date : </lable>
-                                <p>2000/04/20</p>
+                                <p data-bind="text:dataNasc"></p>
                         
-                            <lable>Address,City : </lable>
-                                <p>Rua qualquer, Aveiro</p>
+                            <lable>Address : </lable>
+                                <p data-bind="text:address"></p>
+                            
+                            <lable>City : </lable>
+                                <p data-bind="text:city"></p>
                         </div>
 
 
 
                         <div class="single_wrap">
-                            <h4>Description</h4>
-                            <p>
-                                Ola sou o Chiquito e sou muito trabalhador.
-                            </p>
-                            <p>
-                                Onde passo piso tudo e todos. Sou fodido.
-                            </p>
-                            <p>
-                                Quem me vê pensa que sou um trator,
-                            </p>
-                            <p>
-                                mas na verdade sou só um fingido.
-                            </p>
-                            <p>
-                                Sou um verdadeiro informático.
-                            </p>
-                            <p>
-                                Já dei tanto carry que até cansei.
-                            </p>
-                            <p>
-                                Às vezes respondo só "Não sei",
-                            </p>
-                            <p>
-                                porque ninguém entendo o meu intelecto.
-                            </p>
+                            <h4 data-bind="visible:isDesc">Description:</h4>
+                            <p data-bind="text:description"></p>
                         </div>
                         
                         <div class="row button-group-area mt-5 justify-content-center">
-                            <a href="#" class="col-sm-5 col-md-3 genric-btn info circle">Accept</a>
-                            <a href="#" class="col-sm-5 col-md-3 genric-btn danger-border circle">Deny</a>
+                            <a href="#" id="acceptButton" class="col-sm-5 col-md-3 genric-btn info circle">Accept</a>
+                            <a href="#" id="rejectButton" class="col-sm-5 col-md-3 genric-btn danger-border circle">Reject</a>
                         </div>
                     </div>
 
