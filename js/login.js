@@ -39,6 +39,9 @@ $(document).ready(function (){
 
         }else{
             $("#PInvalidLogin").removeClass("d-none");
+            $("#loginEmail").addClass("is-invalid");
+            $("#loginPassword").addClass("is-invalid");
+
             console.log("Not working");
 
         }
