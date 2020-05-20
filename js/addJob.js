@@ -11,132 +11,120 @@
         let flag = true;
         var id = "";
 
-        if (role.length == 0 || role.length > 50) {
-
-            //$("#RSInvalidEmail").removeClass("d-none");
+        if (role.length == 0 || role.length > 250) {
+            $("#AJInvalidRole").html(  "Please insert a Role. ");
+            $("#AJInvalidRole").removeClass("d-none");
             $("#CreateJobRole").removeClass("is-valid");
             $("#CreateJobRole").addClass("is-invalid");
-            //$("#RSInvalidEmail").innerHtml = "Invalid Email ";
 
             if (flag) id = "#CreateJobRole";
             flag = false;
 
         } else {
-            //$("#RSInvalidEmail").addClass("d-none");
+            $("#AJInvalidRole").addClass("d-none");
             $("#CreateJobRole").removeClass("is-invalid");
             $("#CreateJobRole").addClass("is-valid");
         }
 
-        if (city.length == 0 || city.length > 50) {
+        if (city.length == 0 || city.length > 250) {
 
-            //$("#RSInvalidEmail").removeClass("d-none");
+            $("#AJInvalidCity").removeClass("d-none");
             $("#CreateJobCity").removeClass("is-valid");
             $("#CreateJobCity").addClass("is-invalid");
-            //$("#RSInvalidEmail").innerHtml = "Invalid Email ";
+            $("#AJInvalidCity").html ("Please insert a City.");
 
             if (flag) id = "#CreateJobCity";
             flag = false;
 
         } else {
-            //$("#RSInvalidEmail").addClass("d-none");
+            $("#AJInvalidCity").addClass("d-none");
             $("#CreateJobCity").removeClass("is-invalid");
             $("#CreateJobCity").addClass("is-valid");
         }
 
-        if (role.length == 0 || role.length > 50) {
+        if (address.length == 0 || address.length > 350) {
 
-            //$("#RSInvalidEmail").removeClass("d-none");
+            $("#AJInvalidAddress").removeClass("d-none");
             $("#CreateJobAddress").removeClass("is-valid");
             $("#CreateJobAddress").addClass("is-invalid");
-            //$("#RSInvalidEmail").innerHtml = "Invalid Email ";
+            $("#AJInvalidAddress").html( "Please insert an address.");
 
             if (flag) id = "#CreateJobAddress";
             flag = false;
 
         } else {
-            //$("#RSInvalidEmail").addClass("d-none");
+            $("#AJInvalidAddress").addClass("d-none");
             $("#CreateJobAddress").removeClass("is-invalid");
             $("#CreateJobAddress").addClass("is-valid");
         }
 
-        if (category.length == 0 || category.length > 50) {
+        if (category.length == 0 || category.length > 350) {
 
-            //$("#RSInvalidEmail").removeClass("d-none");
+            $("#AJInvalidCategory").removeClass("d-none");
             $("#CreateJobCategory").removeClass("is-valid");
             $("#CreateJobCategory").addClass("is-invalid");
-            //$("#RSInvalidEmail").innerHtml = "Invalid Email ";
+            $("#AJInvalidCategory").html("Please insert a category.");
 
             if (flag) id = "#CreateJobCategory";
             flag = false;
 
         } else {
-            //$("#RSInvalidEmail").addClass("d-none");
+            $("#AJInvalidCategory").addClass("d-none");
             $("#CreateJobCategory").removeClass("is-invalid");
             $("#CreateJobCategory").addClass("is-valid");
         }
 
-        if (jobNature.length == 0 || jobNature.length > 50) {
+        if (jobNature.length == 0 || jobNature.length > 350) {
 
-            //$("#RSInvalidEmail").removeClass("d-none");
+            $("#AJInvalidJobNature").removeClass("d-none");
             $("#CreateJobNature").removeClass("is-valid");
             $("#CreateJobNature").addClass("is-invalid");
-            //$("#RSInvalidEmail").innerHtml = "Invalid Email ";
+            $("#AJInvalidJobNature").html( "Invalid Job Nature.");
 
             if (flag) id = "#CreateJobNature";
             flag = false;
 
         } else {
-            //$("#RSInvalidEmail").addClass("d-none");
+            $("#AJInvalidJobNature").addClass("d-none");
             $("#CreateJobNature").removeClass("is-invalid");
             $("#CreateJobNature").addClass("is-valid");
         }
 
-        if (salary.length == 0 || salary.length > 50) {
-
-            //$("#RSInvalidEmail").removeClass("d-none");
+        if (salary.length > 10 || isNaN(salary)) {
+            
+            $("#AJInvalidSalary").html( "You don't have that amount of money");
+            
+            if(isNaN(salary) && salary.length!=0){
+                $("#AJInvalidSalary").html(  "Please insert only numbers.");                
+            }
+            
+            $("#AJInvalidSalary").removeClass("d-none");
             $("#CreateJobSalary").removeClass("is-valid");
             $("#CreateJobSalary").addClass("is-invalid");
-            //$("#RSInvalidEmail").innerHtml = "Invalid Email ";
-
             if (flag) id = "#CreateJobSalary";
             flag = false;
 
         } else {
-            //$("#RSInvalidEmail").addClass("d-none");
+            $("#AJInvalidSalary").addClass("d-none");
             $("#CreateJobSalary").removeClass("is-invalid");
             $("#CreateJobSalary").addClass("is-valid");
         }
 
-        if (vacancy.length == 0 || vacancy.length > 50) {
+        if (vacancy.length == 0 || vacancy.length > 10 || isNaN(vacancy)) {
 
-            //$("#RSInvalidEmail").removeClass("d-none");
+            $("#AJInvalidVacancy").html( "Please insert the number of vacancy.");
+            $("#AJInvalidVacancy").removeClass("d-none");
             $("#CreateJobVacancy").removeClass("is-valid");
             $("#CreateJobVacancy").addClass("is-invalid");
-            //$("#RSInvalidEmail").innerHtml = "Invalid Email ";
+
 
             if (flag) id = "#CreateJobVacancy";
             flag = false;
 
         } else {
-            //$("#RSInvalidEmail").addClass("d-none");
+            $("#AJInvalidVacancy").addClass("d-none");
             $("#CreateJobVacancy").removeClass("is-invalid");
             $("#CreateJobVacancy").addClass("is-valid");
-        }
-
-        if (description.length == 0 || description.length > 50) {
-
-            //$("#RSInvalidEmail").removeClass("d-none");
-            $("#CreateJobDescription").removeClass("is-valid");
-            $("#CreateJobDescription").addClass("is-invalid");
-            //$("#RSInvalidEmail").innerHtml = "Invalid Email ";
-
-            if (flag) id = "#CreateJobDescription";
-            flag = false;
-
-        } else {
-            //$("#RSInvalidEmail").addClass("d-none");
-            $("#CreateJobDescription").removeClass("is-invalid");
-            $("#CreateJobDescription").addClass("is-valid");
         }
 
         if (flag) {

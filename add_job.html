@@ -79,34 +79,55 @@
                             
                                 <div class="form-row">
                                   <div class="form-group col-md-6">
-                                    <label for="CreateJobOffice">Role</label>
+                                    <label for="CreateJobOffice">Role*</label>
                                     <input type="text" class="form-control" id="CreateJobRole" placeholder="Role">
+                                    <div id="AJInvalidRole" class="invalid-feedback d-none">
+                                        Invalid Role.
+                                    </div>
                                   </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="CreateJobCity">City</label>
+                                    <label for="CreateJobCity">City*</label>
                                     <input type="text" class="form-control" id="CreateJobCity" placeholder="City">
+                                    <div id="AJInvalidCity" class="invalid-feedback d-none">
+                                        Invalid City.
+                                    </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="CreateJobAddress">Address</label>
+                                    <label for="CreateJobAddress">Address*</label>
                                     <input type="text" class="form-control" id="CreateJobAddress" placeholder="Address">
+                                    <div id="AJInvalidAddress" class="invalid-feedback d-none">
+                                        Invalid Address.
+                                    </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="CreateJobCategory">Category</label>
+                                    <label for="CreateJobCategory">Category*</label>
                                     <input type="text" class="form-control" id="CreateJobCategory" placeholder="Category">
+                                    <div id="AJInvalidCategory" class="invalid-feedback d-none">
+                                        Invalid Category.
+                                    </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="CreateJobNature">Job Nature</label>
+                                    <label for="CreateJobNature">Job Nature*</label>
                                     <input type="text" class="form-control" id="CreateJobNature" placeholder="Full-time,Part-time...">
+                                    <div id="AJInvalidJobNature" class="invalid-feedback d-none">
+                                        Invalid Job Nature.
+                                    </div>
                                 </div>
                                 <div class="form-row">
                                   <div class="form-group col-md-6">
                                     <label for="CreateJobSalary">Salary</label>
                                     <input type="text" class="form-control" id="CreateJobSalary" placeholder="Salary">
+                                    <div id="AJInvalidSalary" class="invalid-feedback d-none">
+                                        Invalid Salary.
+                                    </div>
                                   </div>
                                   <div class="form-group col-md-4">
-                                    <label for="CreateJobVacancy">Vacancy</label>
+                                    <label for="CreateJobVacancy">Vacancy*</label>
                                     <input type="text" class="form-control" id="CreateJobVacancy" placeholder="Number of available jobs">
+                                    <div id="AJInvalidVacancy" class="invalid-feedback d-none">
+                                        Invalid Vacancy.
+                                    </div>
                                   </div>
                                 </div>
                                 <div class="form-group">
@@ -114,8 +135,7 @@
                                     <textarea type="text" cols="50" rows="3" class="form-control" id="CreateJobDescription"></textarea>
                                 </div>
                                 <div class="form-row ">
-                                    
-                                    <button id="SignInButton"  type="button" class="btn btn-primary">Sign in</button>
+                                    <button id="SignInButton"  type="button" class="btn btn-primary">Add Offer</button>
                                 </div>  
                               </form>
                         </div>
