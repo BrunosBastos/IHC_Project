@@ -79,7 +79,8 @@ ko.applyBindings(new MyViewModel());
         }
     })
 
-    $("#applyButton").click(function () {
+    $("#applyButton").click(function (e) {
+        e.preventDefault();
         if (!($("#applyButton").hasClass("disabled"))) {
             var applications = JSON.parse(localStorage.getItem("applications"))
             var current_user = localStorage.getItem("current_user")
