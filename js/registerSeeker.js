@@ -25,10 +25,10 @@
   };
 
   $("#SignInButton").click(function () {
-    var email = $("#SeekerRegisterEmail").val() //type=email no html já faz verificações
+    var email = $("#SeekerRegisterEmail").val() //catergory=email no html já faz verificações
     var password = $("#SeekerRegisterPassword").val()
     var name = $("#SeekerRegisterName").val()
-    var type = $("#SeekerRegisterProfessionalCategory").val()
+    var catergory = $("#SeekerRegisterProfessionalCategory").val()
     var education = $("#SeekerRegisterEducation").val()
     var address = $("#SeekerRegisterAddress").val()
     var city = $("#SeekerRegisterCity").val()
@@ -38,22 +38,54 @@
     var year = $("#SeekerRegisterYear").val()
     let flag = true;
     var id = "html";
+    let seekers = JSON.parse(localStorage.getItem("seekers"));
+    let recruiters = JSON.parse(localStorage.getItem("recruiters"));
+    console.log(seekers)
 
     if (email.length == 0 || !(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))) {
+      
+      if (flag) id = "#SeekerRegisterEmail";
+      flag = false;
+      
       $("#RSInvalidEmail").removeClass("d-none");
       $("#SeekerRegisterEmail").removeClass("is-valid");
       $("#SeekerRegisterEmail").addClass("is-invalid");
-      $("#RSInvalidEmail").innerHtml = "Invalid Email ";
-      if (flag) id = "#SeekerRegisterEmail";
-      flag = false;
+      $("#RSInvalidEmail").html("Invalid Email");
 
     } else {
+      
       $("#RSInvalidEmail").addClass("d-none");
       $("#SeekerRegisterEmail").removeClass("is-invalid");
       $("#SeekerRegisterEmail").addClass("is-valid");
+      for (let i = 0; i < seekers.length; i++) {
+        if (seekers[i].email.localeCompare(email) == 0) {
+          $("#RSInvalidEmail").html("Email already taken");
+          $("#RSInvalidEmail").removeClass("d-none");
+          $("#SeekerRegisterEmail").removeClass("is-valid");
+          $("#SeekerRegisterEmail").addClass("is-invalid");
+          if (flag) id = "#SeekerRegisterEmail";
+          flag=false;
+        }
+      }
+      for(let i=0;recruiters.length;i++){
+        if(recruiters[i].email.localeCompare(email)==0){
+          $("#RSInvalidEmail").html("Email already taken");
+          $("#RSInvalidEmail").removeClass("d-none");
+          $("#SeekerRegisterEmail").removeClass("is-valid");
+          $("#SeekerRegisterEmail").addClass("is-invalid");
+          if (flag) id = "#SeekerRegisterEmail";
+          flag=false;
+        }
+      }
+
     }
 
     if (password.length < 6 || password.length > 25) {
+      if(password.length<6){
+        $("#RSInvalidPassword").html("Password is to short");
+      }else{
+        $("#RSInvalidPassword").html("Password is to long");
+      }
       $("#RSInvalidPassword").removeClass("d-none");
       $("#SeekerRegisterPassword").removeClass("is-valid");
       $("#SeekerRegisterPassword").addClass("is-invalid");
@@ -65,7 +97,12 @@
       $("#SeekerRegisterPassword").addClass("is-valid");
     }
 
-    if (name.length < 6 || name.length > 50) {
+    if (name.length < 3 || name.length > 100) {
+      if(name.length<3){
+        $("#RSInvalidPassword").html("Insert your Full Name.");
+      }else{
+        $("#RSInvalidPassword").html("Your name is too long.");
+      }
       $("#RSInvalidName").removeClass("d-none");
       $("#SeekerRegisterName").removeClass("is-valid");
       $("#SeekerRegisterName").addClass("is-invalid");
@@ -77,7 +114,8 @@
       $("#SeekerRegisterName").addClass("is-valid");
     }
 
-    if (type.length < 3 || type.length > 50) {
+    if (catergory.length < 3 || catergory.length > 100) {
+      
       $("#RSInvalidCategory").removeClass("d-none");
       $("#SeekerRegisterProfessionalCategory").removeClass("is-valid");
       $("#SeekerRegisterProfessionalCategory").addClass("is-invalid");
@@ -89,7 +127,8 @@
       $("#SeekerRegisterProfessionalCategory").addClass("is-valid");
     }
 
-    if (education.length < 3 || education.length > 50) {
+    if (education.length == 0) {
+      $("#RSInvalidPassword").html("Please choose your Education Level.");
       $("#RSInvalidEducation").removeClass("d-none");
       $("#SeekerRegisterEducation").removeClass("is-valid");
       $("#SeekerRegisterEducation").addClass("is-invalid");
@@ -101,7 +140,12 @@
       $("#SeekerRegisterEducation").addClass("is-valid");
     }
 
-    if (address.length < 5 || address.length > 50) {
+    if (address.length < 5 || address.length > 150) {
+      if (address.length < 5){
+        $("#RSInvalidPassword").html("You address is too short.");
+      }else{
+        $("#RSInvalidPassword").html("Your address is too long.");  
+      }
       $("#RSInvalidAddress").removeClass("d-none");
       $("#SeekerRegisterAddress").removeClass("is-valid");
       $("#SeekerRegisterAddress").addClass("is-invalid");
@@ -113,7 +157,8 @@
       $("#SeekerRegisterAddress").addClass("is-valid");
     }
 
-    if (city.length < 2 || city.length > 50) {
+    if (city.length < 2 || city.length > 150) {
+      
       $("#RSInvalidCity").removeClass("d-none");
       $("#SeekerRegisterCity").removeClass("is-valid");
       $("#SeekerRegisterCity").addClass("is-invalid");
@@ -125,7 +170,8 @@
       $("#SeekerRegisterCity").addClass("is-valid");
     }
 
-    if (phone.length < 3 || phone.length > 15 || isNaN(phone)) {
+    if (phone.length < 5 || phone.length > 15 || isNaN(phone)) {
+      $("#RSInvalidPassword").html("Please insert a valid Phone number");
       $("#RSInvalidPhone").removeClass("d-none");
       $("#SeekerRegisterPhoneNumber").removeClass("is-valid");
       $("#SeekerRegisterPhoneNumber").addClass("is-invalid");
@@ -158,20 +204,9 @@
     }
 
     if (flag) {
-      let seekers = JSON.parse(localStorage.getItem("seekers"));
-      console.log(seekers)
+      
 
-      for (let i = 0; i < seekers.length; i++) {
-        if (seekers[i].email.localeCompare(email) == 0) {
-          $("#RSInvalidEmail").innerHTML = "Email already taken";
-          $("#RSInvalidEmail").removeClass("d-none");
-          $("#SeekerRegisterEmail").removeClass("is-valid");
-          $("#SeekerRegisterEmail").addClass("is-invalid");
-          return;
-        }
-      }
-
-      var user = {"educationLevel":education, "name": name, "dataNasc": day + "/" + month + "/" + year, "city": city, "address": address, "email": email, "password": password, "phoneNumber": phone, "description": "", "category": type }
+      var user = {"educationLevel":education, "name": name, "dataNasc": day + "/" + month + "/" + year, "city": city, "address": address, "email": email, "password": password, "phoneNumber": phone, "description": "", "type": catergory }
       seekers.push(user)
       localStorage.setItem("current_user", user)
 
