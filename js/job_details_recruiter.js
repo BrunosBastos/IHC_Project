@@ -28,6 +28,8 @@ ko.applyBindings(new MyViewModel());
         $("#sort-order").click(function(){
             $("#sort-order").children().toggleClass("ti-angle-down");
             $("#sort-order").children().toggleClass("ti-angle-up");
+            $("#sort-order").parent().attr( "data-original-title", "red" );
+            $('[data-toggle="tooltip"]').tooltip()
         });
 
 

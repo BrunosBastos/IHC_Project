@@ -170,22 +170,22 @@
             <div class="custom_title col">
                 <h3 id="candidates" style="color: black;">Candidates</h1>
             </div>
-            <div class="col-xs-2 col-sm-2 col-md-0"></div>
-            <div class="col-xs-6 col-sm-4 col-md-3">
-                <div class="single_field">
-                    <select class="wide">
-                        <option data-display="Category">Category</option>
+            <!-- <div class="col-xs-2 col-sm-2 col-md-0"></div> -->
+            <div class="col-xs-8 col-sm-6 col-md-5 col-lg-4">
+                <div class="input-group ">
+                    <select class="custom-select" aria-label="Example select with button addon">
+                        <option selected>Order by...</option>
                         <option value="1">Candidate Age</option>
                         <option value="2">Apply Date</option>
                         <option value="3">Category</option>
-                        <option value="4">Education Level</option>
+                        <option value="3">Education Level</option>
                     </select>
-                    
+                    <div class="input-group-append">
+                        <a data-toggle="tooltip" data-placement="top" title="Descendent">
+                        <button id="sort-order" class="btn btn-outline-secondary"> <i class="ti-angle-down"></i></button>
+                    </a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-auto" style="padding: 0 1rem 0 0">
-                
-                <button id="sort-order" class="btn btn-default"><i class="ti-angle-down"></i></button>
             </div>
         </div>
     </div>
