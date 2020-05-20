@@ -99,7 +99,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="bradcam_text">
-                        <h3>Software Engineer</h3>
+                        <h3 data-bind="text:role"></h3>
                     </div>
                 </div>
             </div>
@@ -110,7 +110,7 @@
     <div class="job_details_area">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
+                <div class="col-lg-10">
                     <div class="job_details_header">
                         <div class="single_jobs white-bg d-flex justify-content-between">
                             <div class="jobs_left d-flex align-items-center">
@@ -118,41 +118,41 @@
                                     <img src="img/svg_icon/1.svg" alt="">
                                 </div>
                                 <div class="jobs_conetent">
-                                    <h4 data-bind="text: role"></h4>
+                                    <a href="#"><h4 data-bind="text:role"></h4></a>
                                     <div class="links_locat d-flex align-items-center">
                                         <div class="location">
-                                            <p><i class="fa fa-map-marker"></i><span data-bind="text: city"></span></p>
+                                            <p> <i class="fa fa-map-marker"></i> <span data-bind="text:city"></span></p>
                                         </div>
                                         <div class="location">
-                                            <p><i class="fa fa-clock-o"></i><span data-bind="text: jobNature"></span> </p>
+                                            <p> <i class="fa fa-clock-o"></i> <span data-bind="text:jobNature"></span></p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="jobs_right">
-                                <div class="apply_now">
-                                    <a class="heart_mark" href="#"> <i class="ti-heart"></i> </a>
-                                </div>
-                            </div>
                         </div>
                     </div>
+                    
                     <div class="descript_wrap white-bg">
-                        <div class="job_content">
-                            <ul>
-                                <li>Published on: <span data-bind="text:date"></span></li>
-                                <li>Vacancy: <span data-bind="text:vacancy"></span></li>
-                                <li>Salary: <span data-bind="text:salary"></span></li>
-                                <li>Location: <span data-bind="text:city"></span></li>
-                                <li>Job Nature: <span data-bind="text: jobNature"></span></li>
-                            </ul>
-                        </div>
-
-                        <div class="single_wrap">
-                            <h4 data-bind="visible:isDesc">Job description:</h4>
-                            <p data-bind="text:description"></p>
+                        <div class="single_wrap row">
+                            <div class="job_sumary col-sm-12 col-md-6">
+                                <div class="job_content" style="padding: 0;">
+                                    <h4 >Job summary:</h4>
+                                    <ul>
+                                        <li>Published on: <span data-bind="text:date"></span></li>
+                                        <li>Vacancy: <span data-bind="text:vacancy"></span></li>
+                                        <li>Salary: <span data-bind="text:salary"></span></li>
+                                        <li>Location: <span data-bind="text:city"></span></li>
+                                        <li>Job Nature: <span data-bind="text:jobNature"></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="job_sumary col-sm-12 col-md-6">
+                                <h4 data-bind="visible:isDesc">Job description:</h4>
+                                <p data-bind="text:description"></p>
+                            </div>
                         </div>
                         <div class="row button-group-area mt-5 justify-content-center">
-                            <a href = "#" class="col-sm-6 col-md-4 genric-btn info circle" id="applyButton">Apply</a>
+                            <a href= "#" class="col-sm-6 col-md-4 genric-btn info circle" id="applyButton">Apply</a>
                         </div>
                     </div>
                 </div>
