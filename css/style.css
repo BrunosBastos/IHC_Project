@@ -1431,6 +1431,7 @@ h3 {
 }
 
 /* line 29, ../../Arafath/CL/December/235. Job board/HTML/scss/_slider.scss */
+.custom_title h5,
 .slider_area .single_slider .slider_text h5 {
   font-size: 30px;
   color: #fff;
@@ -1444,12 +1445,20 @@ h3 {
   font-weight: 500;
   color: #fff;
 }
+.custom_title h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  color: #fff;
+}
 
 @media (max-width: 767px) {
+  .custom_title h5,
   .slider_area .single_slider .slider_text h5 {
     font-size: 20px;
   }
   /* line 34, ../../Arafath/CL/December/235. Job board/HTML/scss/_slider.scss */
+  .custom_title h3,
   .slider_area .single_slider .slider_text h3 {
     font-size: 30px;
   }
@@ -1457,10 +1466,12 @@ h3 {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  .custom_title h5,
   .slider_area .single_slider .slider_text h5 {
     font-size: 20px;
   }
   /* line 34, ../../Arafath/CL/December/235. Job board/HTML/scss/_slider.scss */
+  .custom_title h3,
   .slider_area .single_slider .slider_text h3 {
     font-size: 34px;
     line-height: 1.4;
@@ -1468,10 +1479,12 @@ h3 {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+  .custom_title h5,
   .slider_area .single_slider .slider_text h5 {
     font-size: 25px;
   }
   /* line 34, ../../Arafath/CL/December/235. Job board/HTML/scss/_slider.scss */
+  .custom_title h3,
   .slider_area .single_slider .slider_text h3 {
     font-size: 40px;
     line-height: 1.4;
