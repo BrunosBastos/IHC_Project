@@ -1,0 +1,340 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Slinder · Profile</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/tab_logo.ico">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid ">
+                    <div class="header_bottom_border">
+                        <div class="row align-items-center">
+                            <div class="col-xl-3 col-lg-2">
+                                <div class="logo">
+                                    <a href="index.html">
+                                        <img src="img/logo.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-7">
+                                <div class="main-menu d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="index.html">home</a></li>
+                                            <li><a href="jobs.html">Browse Job</a></li>
+                                            <li><a href="#">pages <i class="ti-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="candidate.html">Candidates </a></li>
+                                                    <li><a href="job_details.html">job details </a></li>
+                                                    <li><a href="elements.html">elements</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">blog <i class="ti-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="blog.html">blog</a></li>
+                                                    <li><a href="single-blog.html">single-blog</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                                <div class="Appointment">
+                                    <div class="phone_num d-none d-xl-block">
+                                        <a href="#">Log in</a>
+                                    </div>
+                                    <div class="d-none d-lg-block">
+                                        <a class="boxed-btn3" href="#">Post a Job</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+    <!-- bradcam_area  -->
+    <div class="bradcam_area bradcam_bg_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text">
+                        <h3>Nome</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ bradcam_area  -->
+
+    <div class="job_details_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="job_details_header">
+                        <div class="single_jobs white-bg d-flex justify-content-between">
+                            <div class="jobs_left d-flex align-items-center">
+                                <div class="thumb">
+                                    <img src="img/svg_icon/1.svg" alt="">
+                                </div>
+                                <div class="jobs_conetent">
+                                    
+                                        <h4 data-bind="text:name"></h4>
+                                    <div class="links_locat d-flex align-items-center">
+                                        <div class="location">
+                                            <p> <i class="fa fa-map-marker"></i> <span data-bind="text:city"></span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row jobs_right">
+                                <div class="mx-2 apply_now ">
+                                    <button class="btn btn-secondary" data-toggle="modal" data-target="#myModal">Edit Profile<i class="ti-pencil-alt ml-2"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="descript_wrap white-bg">
+
+                        <div class="job_content">
+                            <lable>Email : </lable>
+                            <p data-bind="text:email"></p>
+                        
+                            <lable>Phone : </lable>
+                            <p data-bind="text:phoneNumber"></p>
+                               
+                            <lable>Address : </lable>
+                                <p data-bind="text:address"></p>
+                            
+                            <lable>City : </lable>
+                                <p data-bind="text:city"></p>
+                        </div>
+
+
+
+                        <div class="single_wrap">
+                            <h4 data-bind="visible:isDesc">Description:</h4>
+                            <p data-bind="text:description"></p>
+                        </div>
+                        
+                    </div>
+
+
+                </div>
+
+                
+            </div>
+
+        </div>
+    </div>
+
+    <!-- modal start -->
+    <div class="modal fade bd-example-modal-lg " id="myModal" tabindex="0" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Profile</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-auto">
+
+                                <div class="form-group job_details_area mt-3" style="background: none;padding: 0;">
+                                    <div class="single_jobs" style="border: none;padding: 0">
+                                        <div class="jobs_left ">
+                                            <div class="thumb">
+                                                <img src="img/svg_icon/1.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group job_details_area mt-3" style="background: none;padding: 0;">
+                                    <button class="btn btn-secondary" style="width: 82px; font-size: 12px;">Edit Logo</button>
+                                </div>
+                            </div>
+                            <div class="form-group col">
+                                <div class="form-group">
+                                    <label for="SeekerRegisterEmail">Email</label>
+                                    <input type="email" class="form-control " id="SeekerRegisterEmail">
+                                    <div id="RSInvalidEmail" class="invalid-feedback d-none">
+                                        Invalid email.
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="SeekerRegisterPassword">Password</label>
+                                    <input type="password" class="form-control " id="SeekerRegisterPassword">
+                                    <div id="RSInvalidPassword" class="invalid-feedback d-none">
+                                        Invalid password length.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <label for="SeekerRegisterName">Company Name</label>
+                                <input type="text" class="form-control " id="SeekerRegisterName">
+                                <div id="RSInvalidName" class="invalid-feedback d-none">
+                                    Invalid Company Name.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-xs-12 col-sm-3">
+                                <label for="SeekerRegisterCity">City</label>
+                                <input type="text" class="form-control" id="SeekerRegisterCity" placeholder="ex: Aveiro">
+                                <div id="RSInvalidCity" class="invalid-feedback d-none">
+                                    Invalid City.
+                                </div>
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-5">
+                                <label for="SeekerRegisterAddress">Address</label>
+                                <input type="text" class="form-control" id="SeekerRegisterAddress" placeholder="ex: 86 Rua da Granja">
+                                <div id="RSInvalidAddress" class="invalid-feedback d-none">
+                                    Invalid address.
+                                </div>
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-4">
+                                <label for="SeekerRegisterPhoneNumber">Phone</label>
+                                <input type="text" class="form-control" id="SeekerRegisterPhoneNumber">
+                                <div  id="RSInvalidPhone" class="invalid-feedback d-none">
+                                    Invalid Phone number.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="CreateJobDescription">Description</label>
+                            <span class="textarea form-control" role="textbox" contenteditable></span>
+                            </textarea>
+                        </div> 
+                      </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer start -->
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row justify-content-left">
+                    <div class="col-xl-6 col-md-6">
+                        <div class="footer_widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                            <div class="footer_logo">
+                                <a href="#">
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-md-6">
+                        <div class="footer_widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                            <p>
+                                slinder@support.com <br>
+                                +351 255 255 255 <br>
+                                Av. 25 de Abril, 3811-901 Aveiro
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </footer>
+    <!--/ footer end  -->
+
+    <!-- link that opens popup -->
+    <!-- JS here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/scrollIt.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/gijgo.min.js"></script>
+
+
+
+    <!--contact js-->
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+
+    <script src="js/knockout.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/profile.js"></script>
+
+    <style>
+        .textarea {
+            display: block;
+            width: 100%;
+            overflow: hidden;
+            resize: none;
+            min-height: 40px;
+            line-height: 20px;
+        }
+    </style>
+
+</body>
+
+</html>
