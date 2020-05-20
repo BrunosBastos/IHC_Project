@@ -1,3 +1,37 @@
+function MyViewModel() {
+    var self = this;
+    self.profile = ko.observable()
+    self.educationLevel = ko.observable()
+    self.name = ko.observable()
+    self.dataNasc = ko.observable()
+    self.city = ko.observable()
+    self.address = ko.observable()
+    self.email = ko.observable()
+    self.password = ko.observable()
+    self.phoneNumber = ko.observable()
+    self.description = ko.observable()
+    self.type = ko.observable()
+    self.isDesc = ko.observable()
+
+    self.setProfile = function (profile) {
+        self.profile(profile)
+        self.educationLevel(self.profile().educationLevel)
+        self.name(self.profile().name)
+        self.dataNasc(self.profile().dataNasc)
+        self.city(self.profile().city)
+        self.address(self.profile().address)
+        self.email(self.profile().email)
+        self.password(self.profile().password)
+        self.phoneNumber(self.profile().phoneNumber)
+        self.description(self.profile().description)
+        self.type(self.profile().type)
+        self.isDesc(self.description().localeCompare(''))
+    }
+}
+var vm = new MyViewModel()
+ko.applyBindings(vm);
+
+
 let seekers;
 let recruiters;
 let current_user;
@@ -10,10 +44,27 @@ $(document).ready(function () {
     recruiters = JSON.parse(localStorage.getItem("recruiters"));
     applications = JSON.parse(localStorage.getItem("applications"));
     current_user = localStorage.getItem("current_user");
-    current_profile = {"educationLevel": "Bachelor’s Degree", "name":"Leandro Silva", "dataNasc":"26/06/2000", "city":"Aveiro", "address":"Rua D. Joana", "email":"leandro@gmail.com", "password":"passpass", "phoneNumber":"929876543", "description":"degree in computer science", "type":"Software & Web"}
-    current_job = JSON.parse(localStorage.getItem("current_offer"));
+    current_profile = localStorage.getItem("current_profile")
+    if (current_profile.length == 0) {
+        $("#rejectButton").hide()
+        $("#acceptButton").hide()
+        $("#headerProf").text("Your Account")
+        var seekers = JSON.parse(localStorage.getItem("seekers"))
+        for (i = 0; i < seekers.length; i++) {
+            if (seekers[i].email.localeCompare(current_user)) {
+                current_profile = seekers[i]
+                break;
+            }
+        }
+    } else {
+        $("#editProfileButton").hide()
+        current_profile = JSON.parse(current_profile)
+        current_job = JSON.parse(localStorage.getItem("current_offer"));
+        $("#headerProf").text(current_job.role)
+    }
+    vm.setProfile(current_profile)
 
-
+    /*
     // sees if the user seeing the profile is a seeker
     for (let i = 0; i < seekers.length; i++) {
         if (current_user.localeCompare(seekers[i].email) == 0) {
@@ -29,13 +80,12 @@ $(document).ready(function () {
             }
         }
     } else {
-        console.log("wtf")
-    }
-
+        //console.log("wtf")
+    }*/
 
     for (let i = 0; i < applications.length; i++) {
         if (applications[i].email.localeCompare(current_profile.email) == 0 && applications[i].id == current_job.id) {
-            if (applications[i].status.localeCompare("A")==0) {
+            if (applications[i].status.localeCompare("A") == 0) {
                 localStorage.setItem("applications", JSON.stringify(applications));
                 $("#acceptButton").text("Accepted")
                 $("#acceptButton").removeClass("info");
@@ -44,7 +94,7 @@ $(document).ready(function () {
                 $("#rejectButton").hide()
                 break;
             }
-            if (applications[i].status.localeCompare("R")==0) {
+            if (applications[i].status.localeCompare("R") == 0) {
                 localStorage.setItem("applications", JSON.stringify(applications));
                 $("#rejectButton").text("Rejected")
                 $("#rejectButton").addClass("disabled")
@@ -95,24 +145,3 @@ $(document).ready(function () {
         $('[data-toggle="tooltip"]').tooltip()
     });
 });
-
-function MyViewModel() {
-    var self = this;
-    self.profile = ko.observable({"educationLevel": "Bachelor’s Degree", "name":"Leandro Silva", "dataNasc":"26/06/2000", "city":"Aveiro", "address":"Rua D. Joana", "email":"leandro@gmail.com", "password":"passpass", "phoneNumber":"929876543", "description":"degree in computer science", "type":"Software & Web"})
-
-    self.isSeeker = ko.observable(self.profile().email.localeCompare(localStorage.getItem("current_user")) == 0)
-    self.isRecruiter = ko.observable(!self.isSeeker())
-
-    self.educationLevel = ko.observable(self.profile().educationLevel)
-    self.name = ko.observable(self.profile().name)
-    self.dataNasc = ko.observable(self.profile().dataNasc)
-    self.city = ko.observable(self.profile().city)
-    self.address = ko.observable(self.profile().address)
-    self.email = ko.observable(self.profile().email)
-    self.password = ko.observable(self.profile().password)
-    self.phoneNumber = ko.observable(self.profile().phoneNumber)
-    self.description = ko.observable(self.profile().description)
-    self.type = ko.observable(self.profile().type)
-    self.isDesc = ko.observable(self.description().localeCompare(''))
-}
-ko.applyBindings(new MyViewModel());
