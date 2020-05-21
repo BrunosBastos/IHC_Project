@@ -52,6 +52,7 @@ $(document).ready(function () {
             user_type = "seeker";
             $("#rejectButton").hide()
             $("#acceptButton").hide()
+            $(".recr-nav").hide()
             $("#headerProf").text("Your Account")
             current_profile = seekers[i]
             break
@@ -64,6 +65,7 @@ $(document).ready(function () {
             if (current_user.localeCompare(recruiters[i].email) == 0) {
                 user_type = "recruiter";
                 $("#editProfileButton").hide()
+                $(".seek-nav").hide()
                 current_profile = JSON.parse(localStorage.getItem("current_profile"))
                 current_job = JSON.parse(localStorage.getItem("current_offer"));
                 $("#headerProf").text(current_job.role)

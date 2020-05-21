@@ -67,7 +67,7 @@
           flag=false;
         }
       }
-      for(let i=0;recruiters.length;i++){
+      for(let i=0;i<recruiters.length;i++){
         if(recruiters[i].email.localeCompare(email)==0){
           $("#RSInvalidEmail").html("Email already taken");
           $("#RSInvalidEmail").removeClass("d-none");
@@ -99,9 +99,9 @@
 
     if (name.length < 3 || name.length > 100) {
       if(name.length<3){
-        $("#RSInvalidPassword").html("Insert your Full Name.");
+        $("#RSInvalidName").html("Insert your Full Name.");
       }else{
-        $("#RSInvalidPassword").html("Your name is too long.");
+        $("#RSInvalidName").html("Your name is too long.");
       }
       $("#RSInvalidName").removeClass("d-none");
       $("#SeekerRegisterName").removeClass("is-valid");
@@ -128,7 +128,7 @@
     }
 
     if (education.length == 0) {
-      $("#RSInvalidPassword").html("Please choose your Education Level.");
+      $("#RSInvalidEducation").html("Please choose your Education Level.");
       $("#RSInvalidEducation").removeClass("d-none");
       $("#SeekerRegisterEducation").removeClass("is-valid");
       $("#SeekerRegisterEducation").addClass("is-invalid");
@@ -142,9 +142,9 @@
 
     if (address.length < 5 || address.length > 150) {
       if (address.length < 5){
-        $("#RSInvalidPassword").html("You address is too short.");
+        $("#RSInvalidAddress").html("You address is too short.");
       }else{
-        $("#RSInvalidPassword").html("Your address is too long.");  
+        $("#RSInvalidAddress").html("Your address is too long.");  
       }
       $("#RSInvalidAddress").removeClass("d-none");
       $("#SeekerRegisterAddress").removeClass("is-valid");
@@ -162,7 +162,7 @@
       $("#RSInvalidCity").removeClass("d-none");
       $("#SeekerRegisterCity").removeClass("is-valid");
       $("#SeekerRegisterCity").addClass("is-invalid");
-      if (flag) id = "#SeekerRegisterAddress";
+      if (flag) id = "#SeekerRegisterCity";
       flag = false;
     } else {
       $("#RSInvalidCity").addClass("d-none");
@@ -171,7 +171,7 @@
     }
 
     if (phone.length < 5 || phone.length > 15 || isNaN(phone)) {
-      $("#RSInvalidPassword").html("Please insert a valid Phone number");
+      $("#RSInvalidPhone").html("Please insert a valid Phone number");
       $("#RSInvalidPhone").removeClass("d-none");
       $("#SeekerRegisterPhoneNumber").removeClass("is-valid");
       $("#SeekerRegisterPhoneNumber").addClass("is-invalid");
