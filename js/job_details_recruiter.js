@@ -26,10 +26,8 @@ ko.applyBindings(new MyViewModel());
     $(document).ready(function(){
         //if ()
         $("#sort-order").click(function(){
-            $("#sort-order").children().toggleClass("ti-angle-down");
-            $("#sort-order").children().toggleClass("ti-angle-up");
-            $("#sort-order").parent().attr( "data-original-title", "red" );
-            $('[data-toggle="tooltip"]').tooltip()
+            $("#sort-order").children('i').toggleClass("ti-bar-chart");
+            $("#sort-order").children('i').toggleClass("ti-bar-chart-alt");
         });
 
 

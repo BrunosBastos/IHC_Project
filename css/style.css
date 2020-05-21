@@ -3519,7 +3519,7 @@ h3 {
   margin-bottom: 20px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   /* line 192, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
   .recent_joblist {
     margin-top: 40px;
@@ -3993,6 +3993,7 @@ h3 {
   text-align: center;
   display: inline-block;
   background: #EFFDF5;
+  cursor: pointer;
 }
 
 /* line 83, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_details.scss */

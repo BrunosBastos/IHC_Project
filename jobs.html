@@ -52,7 +52,7 @@
                                 <div class="main-menu  d-none d-lg-block" style="text-align:right">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a href="help.html">Help</a></li>
+                                            <li><a href="help.html" target="_blank">Help</a></li>
                                             <li><a href="jobs.html" style="text-decoration: underline;">Browse Job</a></li>
                                             <li><a href="my_applies.html">My Applies</a></li>
                                             <li><a href="favorites.html">Favorites</a></li>
@@ -173,8 +173,8 @@
                                 <div class="col-md-6">
                                     <div class="serch_cat d-flex justify-content-end">
                                         <select class="form-control">
-                                            <option data-display="Most Recent">Most Recent</option>
-                                            <option value="1">Least Recent</option>
+                                            <option>Ascending Order</option>
+                                            <option>Descending Order</option>
                                         </select>
                                     </div>
                                 </div>
@@ -204,7 +204,7 @@
                                     </div>
                                     <div class="jobs_right">
                                         <div class="apply_now">
-                                            <a class="heart_mark" href="#"> <i class="ti-heart"></i> </a>
+                                            <a class="heart_mark" data-toggle="tooltip" data-placement="top" title="Edit Profile"> <i class="ti-heart"></i> </a>
                                             <a href="#" class="boxed-btn3" data-bind="click: $parent.goToJobDetails">View Job</a>
                                         </div>
                                         <div class="date">

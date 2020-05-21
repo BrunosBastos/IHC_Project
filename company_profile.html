@@ -47,38 +47,16 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-xl-6 col-lg-7">
-                                <div class="main-menu d-none d-lg-block">
+                            <div class="col" style="text-align:right;">
+                                <div class="main-menu  d-none d-lg-block" style="text-align:right">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a href="index.html">home</a></li>
-                                            <li><a href="jobs.html">Browse Job</a></li>
-                                            <li><a href="#">pages <i class="ti-angle-down"></i></a>
-                                                <ul class="submenu">
-                                                    <li><a href="candidate.html">Candidates </a></li>
-                                                    <li><a href="job_details.html">job details </a></li>
-                                                    <li><a href="elements.html">elements</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">blog <i class="ti-angle-down"></i></a>
-                                                <ul class="submenu">
-                                                    <li><a href="blog.html">blog</a></li>
-                                                    <li><a href="single-blog.html">single-blog</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="help.html" target="_blank">Help</a></li>
+                                            <li><a href="my_jobs.html">My Job Offers</a></li>
+                                            <li><a href="company_profile.html" style="text-decoration: underline;">Profile</a></li>
+                                            <li><a href="index.html">Log Out</a></li>
                                         </ul>
                                     </nav>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-3 d-none d-lg-block">
-                                <div class="Appointment">
-                                    <div class="phone_num d-none d-xl-block">
-                                        <a href="#">Log in</a>
-                                    </div>
-                                    <div class="d-none d-lg-block">
-                                        <a class="boxed-btn3" href="#">Post a Job</a>
-                                    </div>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -128,43 +106,35 @@
                                 </div>
                             </div>
                             <div class="row jobs_right">
-                                <div class="mx-2 apply_now ">
-                                    <button class="btn btn-secondary" data-toggle="modal" data-target="#myModal">Edit Profile<i class="ti-pencil-alt ml-2"></i></button>
+                                <div class="mx-2 apply_now">
+                                    <span href="#" data-toggle="modal" data-target="#myModal"> 
+                                        <a class="heart_mark" data-toggle="tooltip" data-placement="top" title="Edit Profile"><i class="ti-pencil-alt"></i> </a>
+                                    </span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="descript_wrap white-bg">
-
-                        <div class="job_content">
-                            <label>Email : </label>
-                            <p data-bind="text:email"></p>
-                        
-                            <label>Phone : </label>
-                            <p data-bind="text:phoneNumber"></p>
-                               
-                            <label>Address : </label>
-                                <p data-bind="text:address"></p>
-                            
-                            <label>City : </label>
-                                <p data-bind="text:city"></p>
+                        <div class="single_wrap row">
+                            <div class="job_sumary col-sm-12 col-md-6">
+                                <div class="job_content" style="padding: 0;">
+                                    <h4 >Profile Summary:</h4>
+                                    <ul>
+                                        <li>Email: <span data-bind="text:email"></span></li>
+                                        <li>Phone: <span data-bind="text:phoneNumber"></span></li>
+                                        <li>Address: <span data-bind="text:address"></span></li>
+                                        <li>City: <span data-bind="text:city"></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="job_sumary col-sm-12 col-md-6">
+                                <h4 data-bind="visible:isDesc">Profile Description:</h4>
+                                <p data-bind="text:description"></p>
+                            </div>
                         </div>
-
-
-
-                        <div class="single_wrap">
-                            <h4 data-bind="visible:isDesc">Description:</h4>
-                            <p data-bind="text:description"></p>
-                        </div>
-                        
                     </div>
-
-
                 </div>
-
-                
             </div>
-
         </div>
     </div>
 

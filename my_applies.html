@@ -102,7 +102,7 @@
                                 <div class="main-menu  d-none d-lg-block" style="text-align:right">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a href="help.html">Help</a></li>
+                                            <li><a href="help.html" target="_blank">Help</a></li>
                                             <li><a href="jobs.html">Browse Job</a></li>
                                             <li><a href="my_applies.html" style="text-decoration: underline;">My Applies</a></li>
                                             <li><a href="favorites.html">Favorites</a></li>
@@ -157,22 +157,43 @@
                                     <div class="col-lg-12 mb-4">
                                         <div class="serch_cat d-flex justify-content-end">
                                             <select>
-                                                <option data-display="Most Recent">Most Recent</option>
-                                                <option value="1">Least Recent</option>
+                                                <option data-display="Order by">None</option>
+                                                <option value="1" data-display="Added (newest)">Date Added (newest)</option>
+                                                <option value="2" data-display="Added (oldest)">Date Added (oldest)</option>
+                                                <option value="3" data-display="Published (newest)">Date Published (newest)</option>
+                                                <option value="4" data-display="Published (oldest)">Date Published (oldest)</option>
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-lg-12 mb-2 ml-4">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                        <label class="form-check-label" for="exampleCheck1">Accepted</label>
+                                    <div class="col-sm-7 col-md-12">
+                                        <div class="switch-wrap d-flex justify-content-between mx-2">
+                                            <p style="margin-top: 0;">Accepted</p>
+                                            <div class="confirm-switch">
+                                                <input type="checkbox" id="default-switch">
+                                                <label for="default-switch"></label>
+                                            </div>
+                                        </div>
+
                                     </div>
-                                    <div class="col-lg-12 mb-2 ml-4">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                                        <label class="form-check-label" for="exampleCheck2">Pending</label>
+                                    <div class="col-sm-7 col-md-12">
+                                        <div class="switch-wrap d-flex justify-content-between mx-2">
+                                            <p style="margin-top: 0;">Pending</p>
+                                            <div class="confirm-switch">
+                                                <input type="checkbox" id="default-switch2">
+                                                <label for="default-switch2"></label>
+                                            </div>
+                                        </div>
+
                                     </div>
-                                    <div class="col-lg-12 mb-4 ml-4">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck3">
-                                        <label class="form-check-label" for="exampleCheck3">Rejected</label>
+                                    <div class="col-sm-7 col-md-12">
+                                        <div class="switch-wrap d-flex justify-content-between mx-2">
+                                            <p style="margin-top: 0;">Rejected</p>
+                                            <div class="confirm-switch">
+                                                <input type="checkbox" id="default-switch3">
+                                                <label for="default-switch3"></label>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </form>
@@ -227,7 +248,8 @@
                                             <p>Date line: <span data-bind="text:date"></span></p>
                                         </div>
                                         <div class="date">
-                                            <p><span data-bind="text:$parent.styleclass($data)"></span></p>
+                                            <p><span data-bind="text:$parent.styleclass($data),
+                                                style:{ color: $parent.status($data) == 'Accepted' ? '#4cd3e3' : ($parent.status($data) == 'Rejected' ? '#ff5e13' : '#7A838B')}"></span></p>
                                         </div>
                                     </div>
                                 </div>
