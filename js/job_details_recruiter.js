@@ -24,10 +24,16 @@ ko.applyBindings(new MyViewModel());
 
 (function ($) {
     $(document).ready(function(){
+        var flag = false;
         //if ()
         $("#sort-order").click(function(){
-            $("#sort-order").children('i').toggleClass("ti-bar-chart");
-            $("#sort-order").children('i').toggleClass("ti-bar-chart-alt");
+            if (flag) {
+                $("#sort-order").html('Asc <i class="ti-bar-chart"></i>');
+                flag = false;
+            } else {
+                $("#sort-order").html('Desc <i class="ti-bar-chart-alt"></i>');
+                flag = true;
+            }
         });
 
 

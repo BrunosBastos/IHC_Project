@@ -208,7 +208,7 @@
 
       var user = {"educationLevel":education, "name": name, "dataNasc": day + "/" + month + "/" + year, "city": city, "address": address, "email": email, "password": password, "phoneNumber": phone, "description": "", "type": catergory }
       seekers.push(user)
-      localStorage.setItem("current_user", user)
+      localStorage.setItem("current_user", user.email)
 
       localStorage.setItem("seekers", JSON.stringify(seekers));
 

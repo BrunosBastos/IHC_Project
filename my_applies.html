@@ -160,8 +160,8 @@
                                                 <option data-display="Order by">None</option>
                                                 <option value="1" data-display="Added (newest)">Date Added (newest)</option>
                                                 <option value="2" data-display="Added (oldest)">Date Added (oldest)</option>
-                                                <option value="3" data-display="Published (newest)">Date Published (newest)</option>
-                                                <option value="4" data-display="Published (oldest)">Date Published (oldest)</option>
+                                                <option value="3" data-display="Posted (newest)">Date Posted (newest)</option>
+                                                <option value="4" data-display="Posted (oldest)">Date Posted (oldest)</option>
                                             </select>
                                         </div>
                                     </div>
@@ -169,7 +169,7 @@
                                         <div class="switch-wrap d-flex justify-content-between mx-2">
                                             <p style="margin-top: 0;">Accepted</p>
                                             <div class="confirm-switch">
-                                                <input type="checkbox" id="default-switch">
+                                                <input type="checkbox" id="default-switch" checked>
                                                 <label for="default-switch"></label>
                                             </div>
                                         </div>
@@ -179,7 +179,7 @@
                                         <div class="switch-wrap d-flex justify-content-between mx-2">
                                             <p style="margin-top: 0;">Pending</p>
                                             <div class="confirm-switch">
-                                                <input type="checkbox" id="default-switch2">
+                                                <input type="checkbox" id="default-switch2" checked>
                                                 <label for="default-switch2"></label>
                                             </div>
                                         </div>
@@ -189,7 +189,7 @@
                                         <div class="switch-wrap d-flex justify-content-between mx-2">
                                             <p style="margin-top: 0;">Rejected</p>
                                             <div class="confirm-switch">
-                                                <input type="checkbox" id="default-switch3">
+                                                <input type="checkbox" id="default-switch3" checked>
                                                 <label for="default-switch3"></label>
                                             </div>
                                         </div>
@@ -245,11 +245,11 @@
                                             <a class="boxed-btn3" data-bind="click:$parent.goToJobDetails">See Details</a>
                                         </div>
                                         <div class="date">
-                                            <p>Date line: <span data-bind="text:date"></span></p>
+                                            <p>Date posted: <span data-bind="text:date"></span></p>
                                         </div>
                                         <div class="date">
-                                            <p><span data-bind="text:$parent.styleclass($data),
-                                                style:{ color: $parent.status($data) == 'Accepted' ? '#4cd3e3' : ($parent.status($data) == 'Rejected' ? '#ff5e13' : '#7A838B')}"></span></p>
+                                            <p style="font-weight: bold;" data-bind="text:$parent.styleclass($data),
+                                                style:{ color: $parent.status($data) == 'Accepted' ? '#4cd3e3' : ($parent.status($data) == 'Rejected' ? '#ff5e13' : '#7A838B')}"></p>
                                         </div>
                                     </div>
                                 </div>

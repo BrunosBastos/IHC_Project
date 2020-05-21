@@ -105,10 +105,10 @@
                                         <div class="single_field">
                                             <select class="wide">
                                                 <option data-display="Order by">Order by</option>
-                                                <option value="1" title="j3ijr">Date (asc)</option>
-                                                <option value="2">Date (des)</option>
-                                                <option value="3">Candidates (asc)</option>
-                                                <option value="4">Candidates (des)</option>
+                                                <option value="1" title="j3ijr">Date Posted (asc)</option>
+                                                <option value="2">Date Posted (desc)</option>
+                                                <option value="3">Nº Candidates (asc)</option>
+                                                <option value="4">Nº Candidates (desc)</option>
                                             </select>
                                         </div>
                                     </div>
@@ -163,7 +163,8 @@
                                             <a title="Show Candidates List" class="boxed-btn3 js-candidates" style="padding: 9px 17px 9px 17px;" data-bind="click: $parent.goToJobDetails">Show Candidates</a>
                                         </div>
                                         <div class="date">
-                                            <p data-bind="text:date"></p>
+                                            <p>Date posted: <span data-bind="text:date"></span></p>
+                                            <p>Nº Candidates: <span style="font-weight: bold;">7</span></p>
                                         </div>
                                     </div>
                                 </div>

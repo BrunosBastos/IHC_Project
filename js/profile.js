@@ -97,7 +97,8 @@ $(document).ready(function () {
 
     vm.setProfile(current_profile)
 
-    $("#acceptButton").click(function () {
+    $("#acceptButton").click(function (e) {
+        e.preventDefault();
         for (let i = 0; i < applications.length; i++) {
             if (applications[i].email.localeCompare(current_profile.email) == 0 && applications[i].id == current_job.id) {
                 applications[i].status = "A";
@@ -112,7 +113,8 @@ $(document).ready(function () {
         $("#rejectButton").hide()
     })
 
-    $("#rejectButton").click(function () {
+    $("#rejectButton").click(function (e) {
+        e.preventDefault();
         for (let i = 0; i < applications.length; i++) {
             if (applications[i].email.localeCompare(current_profile.email) == 0 && applications[i].id == current_job.id) {
                 applications[i].status = "R";
