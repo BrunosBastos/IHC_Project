@@ -182,7 +182,7 @@
                             <div class="form-group col">
                                 <div class="form-group">
                                     <label for="SeekerRegisterEmail">Email</label>
-                                    <input type="email" class="form-control " id="SeekerRegisterEmail">
+                                    <input type="email" class="form-control " id="SeekerRegisterEmail" data-bind="value:email">
                                     <div id="RSInvalidEmail" class="invalid-feedback d-none">
                                         Invalid email.
                                     </div>
@@ -199,7 +199,7 @@
                         <div class="form-row">
                             <div class="form-group col">
                                 <label for="SeekerRegisterName">Name</label>
-                                <input type="text" class="form-control " id="SeekerRegisterName">
+                                <input type="text" class="form-control " id="SeekerRegisterName" data-bind="value:name">
                                 <div id="RSInvalidName" class="invalid-feedback d-none">
                                     Invalid name.
                                 </div>
@@ -220,7 +220,7 @@
                         <div class="form-row">
                             <div class="form-group col-xs-12 col-sm-6">
                                 <label for="SeekerRegisterProfessionalCategory">Professinal Category</label>
-                                <input list=category type="text" class="form-control" id="SeekerRegisterProfessionalCategory" placeholder="ex: Design">
+                                <input list=category type="text" class="form-control" id="SeekerRegisterProfessionalCategory" placeholder="ex: Design"  data-bind="value:type">
                                 <datalist id=category>
                                     <option value="Design & Creative"></option>
                                     <option value="Marketing"></option>
@@ -237,7 +237,7 @@
                             </div>
                             <div class="form-group col-xs-12 col-sm-6">
                                 <label for="SeekerRegisterEducation">Education Level</label>
-                                <input list=education type="text" class="form-control" id="SeekerRegisterEducation" placeholder="ex: High School">
+                                <input list=education type="text" class="form-control" id="SeekerRegisterEducation" placeholder="ex: High School"   data-bind="value:educationLevel">
                                 <datalist id=education>
                                     <option value="Less Than High School"></option>
                                     <option value="High School Diploma or Equivalent"></option>
@@ -256,21 +256,21 @@
                         <div class="form-row">
                             <div class="form-group col-xs-12 col-sm-3">
                                 <label for="SeekerRegisterCity">City</label>
-                                <input type="text" class="form-control" id="SeekerRegisterCity" placeholder="ex: Aveiro">
+                                <input type="text" class="form-control" id="SeekerRegisterCity" placeholder="ex: Aveiro" data-bind="value:city">
                                 <div id="RSInvalidCity" class="invalid-feedback d-none">
                                     Invalid City.
                                 </div>
                             </div>
                             <div class="form-group col-xs-12 col-sm-5">
                                 <label for="SeekerRegisterAddress">Address</label>
-                                <input type="text" class="form-control" id="SeekerRegisterAddress" placeholder="ex: 86 Rua da Granja">
+                                <input type="text" class="form-control" id="SeekerRegisterAddress" placeholder="ex: 86 Rua da Granja" data-bind="value:address">
                                 <div id="RSInvalidAddress" class="invalid-feedback d-none">
                                     Invalid address.
                                 </div>
                             </div>
                             <div class="form-group col-xs-12 col-sm-4">
                                 <label for="SeekerRegisterPhoneNumber">Phone</label>
-                                <input type="text" class="form-control" id="SeekerRegisterPhoneNumber">
+                                <input type="text" class="form-control" id="SeekerRegisterPhoneNumber" data-bind="value:phoneNumber">
                                 <div  id="RSInvalidPhone" class="invalid-feedback d-none">
                                     Invalid Phone number.
                                 </div>
@@ -278,7 +278,7 @@
                         </div>
                         <div class="form-group">
                             <label for="CreateJobDescription">Description</label>
-                            <span class="textarea form-control" role="textbox" contenteditable></span>
+                            <span class="textarea form-control" role="textbox" contenteditable data-bind="text:description"></span>
                             </textarea>
                         </div> 
                       </form>

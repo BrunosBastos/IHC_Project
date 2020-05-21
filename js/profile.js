@@ -67,6 +67,26 @@ $(document).ready(function () {
                 current_profile = JSON.parse(localStorage.getItem("current_profile"))
                 current_job = JSON.parse(localStorage.getItem("current_offer"));
                 $("#headerProf").text(current_job.role)
+                for (let i = 0; i < applications.length; i++) {
+                    if (applications[i].email.localeCompare(current_profile.email) == 0 && applications[i].id == current_job.id) {
+                        if (applications[i].status.localeCompare("A") == 0) {
+                            localStorage.setItem("applications", JSON.stringify(applications));
+                            $("#acceptButton").text("Accepted")
+                            $("#acceptButton").removeClass("info");
+                            $("#acceptButton").addClass("btn-success");
+                            $("#acceptButton").addClass("disabled")
+                            $("#rejectButton").hide()
+                            break;
+                        }
+                        if (applications[i].status.localeCompare("R") == 0) {
+                            localStorage.setItem("applications", JSON.stringify(applications));
+                            $("#rejectButton").text("Rejected")
+                            $("#rejectButton").addClass("disabled")
+                            $("#acceptButton").hide()
+                            break;
+                        }
+                    }
+                }
             }
         }
     } else {
@@ -74,27 +94,6 @@ $(document).ready(function () {
     }
 
     vm.setProfile(current_profile)
-
-    for (let i = 0; i < applications.length; i++) {
-        if (applications[i].email.localeCompare(current_profile.email) == 0 && applications[i].id == current_job.id) {
-            if (applications[i].status.localeCompare("A") == 0) {
-                localStorage.setItem("applications", JSON.stringify(applications));
-                $("#acceptButton").text("Accepted")
-                $("#acceptButton").removeClass("info");
-                $("#acceptButton").addClass("btn-success");
-                $("#acceptButton").addClass("disabled")
-                $("#rejectButton").hide()
-                break;
-            }
-            if (applications[i].status.localeCompare("R") == 0) {
-                localStorage.setItem("applications", JSON.stringify(applications));
-                $("#rejectButton").text("Rejected")
-                $("#rejectButton").addClass("disabled")
-                $("#acceptButton").hide()
-                break;
-            }
-        }
-    }
 
     $("#acceptButton").click(function () {
         for (let i = 0; i < applications.length; i++) {
