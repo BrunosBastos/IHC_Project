@@ -43,7 +43,7 @@
                             <div class="row align-items-center">
                                 <div class="col-xl-3 col-lg-2">
                                     <div class="logo">
-                                        <a href="index.html">
+                                        <a href="my_jobs.html">
                                             <img src="img/logo.png" alt="">
                                         </a>
                                     </div>
@@ -103,15 +103,49 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="single_field">
-                                            <select class="wide">
-                                                <option data-display="Order by">Order by</option>
-                                                <option value="1" title="j3ijr">Date Posted (asc)</option>
-                                                <option value="2">Date Posted (desc)</option>
-                                                <option value="3">Nº Candidates (asc)</option>
-                                                <option value="4">Nº Candidates (desc)</option>
+                                            <input type="text" placeholder="Search Location">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="single_field">
+                                            <input list=category type="text" class="form-control" placeholder="Category">
+                                            <datalist id=category>
+                                                <option value="Design & Creative"></option>
+                                                <option value="Marketing"></option>
+                                                <option value="Telemarketing"></option>
+                                                <option value="Software & Web"></option>
+                                                <option value="Administration"></option>
+                                                <option value="Teaching & Education"></option>
+                                                <option value="Engineering"></option>
+                                                <option value="Garments / Textile"></option>
+                                            </datalist>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="single_field">
+                                            <select class="form-control">
+                                                <option data-display="Job Type">None</option>
+                                                <option>Full-time</option>
+                                                <option>Part-time</option>
                                             </select>
                                         </div>
                                     </div>
+                                    <div class="col-lg-12">
+                                        <div class="single_field">
+                                            <select class="form-control">
+                                                <option data-display="Education Level">None</option>
+                                                <option>Less Than High School</option>
+                                                <option>High School Diploma or Equivalent</option>
+                                                <option>Some College, No Degree</option>
+                                                <option>Associate’s Degree</option>
+                                                <option>Bachelor’s Degree</option>
+                                                <option>Postsecondary Non-Degree Award</option>
+                                                <option>Master’s Degree</option>
+                                                <option>Doctoral or Professional Degree</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
                                 </div>
                             </form>
                         </div>
@@ -122,19 +156,34 @@
                     </div>
                 </div>
                 <div class="col-lg-9">
-                    <div class="recent_joblist_wrap">
-                        <div class="recent_joblist white-bg ">
-                            <div class="row align-items-center">
-                                <div class="col-md-9 col-sm-8 col-xs-6">
-                                    <h4>Job Listing</h4>
-                                </div>
-                                <div class="col-md-3 col-sm-4 col-xs-6">
-                                    <div class="reset_btn" style="text-align:right;">
-                                        <a href="./add_job.html"><button class="boxed-btn3 w-30" >Add Offer</button></a>
+                    <div class="row">
+                            <div class="recent_joblist_wrap col-9" style="padding-right:0">
+                                <div class="recent_joblist white-bg">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8 col-sm-7 col-xs-6">
+                                            <h4>Job Listing</h4>
+                                        </div>
+                                        <div class="col-md-4 col-sm-5 col-xs-6">
+                                            <div class="single_field">
+                                                <select class="wide" style="width: 0">
+                                                    <option data-display="Order by">Order by</option>
+                                                    <option value="1" title="j3ijr">Date Posted (asc)</option>
+                                                    <option value="2">Date Posted (desc)</option>
+                                                    <option value="3">Nº Candidates (asc)</option>
+                                                    <option value="4">Nº Candidates (desc)</option>
+                                                </select>
+                                            </div>
+                                        </div>                                         
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                            <div class="recent_joblist_wrap col-3 p-3">
+                                    <div class=".recent_joblist">
+                                        <div class="reset_btn" style="text-align:right;">
+                                            <a href="./add_job.html"><button class="boxed-btn3 w-10" >Add Offer</button></a>
+                                        </div>
+                                    </div>
+                            </div>
                     </div>
 
                     <div class="job_lists m-0">

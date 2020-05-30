@@ -42,7 +42,7 @@
                         <div class="row align-items-center">
                             <div class="col-xl-3 col-lg-2">
                                 <div class="logo">
-                                    <a href="index.html">
+                                    <a href="javascript:history.back()">
                                         <img src="img/logo.png" alt="">
                                     </a>
                                 </div>
@@ -98,7 +98,7 @@
                         <div class="single_jobs white-bg d-flex justify-content-between">
                             <div class="jobs_left d-flex align-items-center">
                                 <div class="thumb">
-                                    <img src="img/candiateds/1.png" alt="">
+                                    <img src="img/candiateds/0.jpg" alt="">
                                 </div>
                                 <div class="jobs_conetent">
                                     
@@ -116,7 +116,7 @@
                             <div class="row jobs_right">
                                 <div class="mx-2 apply_now">
                                     <span href="#" data-toggle="modal" data-target="#myModal"> 
-                                        <a id="editProfileButton" class="heart_mark" data-toggle="tooltip" data-placement="top" title="Edit Profile"><i class="ti-pencil-alt"></i> </a>
+                                        <a id="editProfileButton" class="heart_mark" data-toggle="tooltip" data-placement="top" title="Edit Profile" style="background-color:#00D363;color:white"><i class="ti-pencil-alt"></i> </a>
                                     </span>
                                 </div>
                             </div>
@@ -144,12 +144,54 @@
                             </div>
                         </div>
                         <div class="row button-group-area mt-5 justify-content-center">
-                            <a href="#" id="acceptButton" class="col-sm-5 col-md-3 genric-btn info-border circle">Accept</a>
-                            <a href="#" id="rejectButton" class="col-sm-5 col-md-3 genric-btn danger-border circle">Reject</a>
+                            <a href="#" id="accept" class="col-sm-5 col-md-3 genric-btn info-border circle" data-toggle="modal" data-target="#myModal2">Accept</a>
+                            <a href="#" id="reject" class="col-sm-5 col-md-3 genric-btn danger-border circle" data-toggle="modal" data-target="#myModal3">Reject</a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Warning!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <p>You're about to ACCEPT a candidate! Please reconfirm your decision.</p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" id="acceptButton">Accept</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Warning!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <p>You're about to REJECT a candidate! Please reconfirm your decision.</p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" id="rejectButton" class="btn btn-danger" data-dismiss="modal">Reject</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
         </div>
     </div>
 
@@ -286,7 +328,7 @@
                       </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>

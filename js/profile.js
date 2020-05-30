@@ -52,7 +52,7 @@ $(document).ready(function () {
             user_type = "seeker";
             $("#rejectButton").hide()
             $("#acceptButton").hide()
-            $(".recr-nav").hide()
+            $(".recr-nav").parent().remove()
             $("#headerProf").text("Your Account")
             current_profile = seekers[i]
             break
@@ -65,7 +65,7 @@ $(document).ready(function () {
             if (current_user.localeCompare(recruiters[i].email) == 0) {
                 user_type = "recruiter";
                 $("#editProfileButton").hide()
-                $(".seek-nav").hide()
+                $(".seek-nav").parent().remove()
                 current_profile = JSON.parse(localStorage.getItem("current_profile"))
                 current_job = JSON.parse(localStorage.getItem("current_offer"));
                 $("#headerProf").text(current_job.role)
@@ -106,11 +106,11 @@ $(document).ready(function () {
                 break;
             }
         }
-        $("#acceptButton").text("Accepted")
-        $("#acceptButton").removeClass("info");
-        $("#acceptButton").addClass("btn-success");
-        $("#acceptButton").addClass("disabled")
-        $("#rejectButton").hide()
+        $("#accept").text("Accepted")
+        $("#accept").removeClass("info");
+        $("#accept").addClass("btn-success");
+        $("#accept").addClass("disabled")
+        $("#reject").hide()
     })
 
     $("#rejectButton").click(function (e) {
@@ -122,9 +122,9 @@ $(document).ready(function () {
                 break;
             }
         }
-        $("#rejectButton").text("Rejected")
-        $("#rejectButton").addClass("disabled")
-        $("#acceptButton").hide()
+        $("#reject").text("Rejected")
+        $("#reject").addClass("disabled")
+        $("#accept").hide()
     })
 
     $("#editProfile").click(function () {

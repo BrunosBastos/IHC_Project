@@ -36,6 +36,7 @@
     var day = $("#SeekerRegisterDay").val()
     var month = $("#SeekerRegisterMonth").val()
     var year = $("#SeekerRegisterYear").val()
+    let confirm = $("#SeekerRegisterConfirm").val()
     let flag = true;
     var id = "html";
     let seekers = JSON.parse(localStorage.getItem("seekers"));
@@ -82,9 +83,9 @@
 
     if (password.length < 6 || password.length > 25) {
       if(password.length<6){
-        $("#RSInvalidPassword").html("Password is to short");
+        $("#RSInvalidPassword").html("Password is too short.");
       }else{
-        $("#RSInvalidPassword").html("Password is to long");
+        $("#RSInvalidPassword").html("Password is too long.");
       }
       $("#RSInvalidPassword").removeClass("d-none");
       $("#SeekerRegisterPassword").removeClass("is-valid");
@@ -96,6 +97,25 @@
       $("#SeekerRegisterPassword").removeClass("is-invalid");
       $("#SeekerRegisterPassword").addClass("is-valid");
     }
+
+    if(confirm.localeCompare(password)!=0 || password.length==0){
+
+      $("#RSInvalidCPassword").html("Passwords do not match.");
+      if(password.length==0){
+      $("#RSInvalidCPassword").html("");
+
+      }
+      $("#RSInvalidCPassword").removeClass("d-none");
+      $("#SeekerRegisterConfirm").removeClass("is-valid");
+      $("#SeekerRegisterConfirm").addClass("is-invalid");
+      if (flag) id = "#SeekerRegisterPassword";
+      flag = false;
+    }else{
+      $("#RSInvalidCPassword").addClass("d-none");
+      $("#SeekerRegisterConfirm").removeClass("is-invalid");
+      $("#SeekerRegisterConfirm").addClass("is-valid");
+    }
+
 
     if (name.length < 3 || name.length > 100) {
       if(name.length<3){

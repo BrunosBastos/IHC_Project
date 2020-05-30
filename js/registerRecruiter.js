@@ -8,6 +8,7 @@ $(document).ready(function () {
     var phone = $("#RecruiterRegisterPhoneNumber").val()
     let seekers = JSON.parse(localStorage.getItem("seekers"));
     let recruiters = JSON.parse(localStorage.getItem("recruiters"));
+    let confirm = $("#RecruiterRegisterConfirm").val();
     let flag = true;
     var id = "html";
 
@@ -63,6 +64,27 @@ $(document).ready(function () {
       $("#RecruiterRegisterPassword").removeClass("is-invalid");
       $("#RecruiterRegisterPassword").addClass("is-valid");
     }
+
+    if(confirm.localeCompare(password)!=0 || password.length==0){
+
+      $("#RRInvalidCPassword").html("Passwords do not match.");
+      if(password.length==0){
+      $("#RRInvalidCPassword").html("");
+
+      }
+      $("#RRInvalidCPassword").removeClass("d-none");
+      $("#RecruiterRegisterConfirm").removeClass("is-valid");
+      $("#RecruiterRegisterConfirm").addClass("is-invalid");
+      if (flag) id = "#RecruiterRegisterPassword";
+      flag = false;
+    }else{
+      $("#RRInvalidCPassword").addClass("d-none");
+      $("#RecruiterRegisterConfirm").removeClass("is-invalid");
+      $("#RecruiterRegisterConfirm").addClass("is-valid");
+    }
+
+
+
 
     if (name.length==0 || name.length > 150) {
       if(name.length==0){
