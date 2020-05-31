@@ -3383,18 +3383,31 @@ h3 {
   -moz-border-radius: 5px;
   border-radius: 5px;
   color: #00D363;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 40px;
   text-align: center;
   display: inline-block;
   background: #EFFDF5;
   margin-right: 15px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #00D363;
+}
+
+.job_listing_area .job_lists .single_jobs .jobs_right .apply_now a.delete {
+  color: #eb5c50;
+  background: #f7e1df;
+  border-color: #eb5c50;
 }
 
 /* line 98, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
 .job_listing_area .job_lists .single_jobs .jobs_right .apply_now a.heart_mark:hover {
   background: #00D363;
   color: #fff;
+}
+
+.job_listing_area .job_lists .single_jobs .jobs_right .apply_now a.delete:hover {
+  background: #eb5c50;
 }
 
 /* line 103, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_list.scss */
@@ -3638,6 +3651,10 @@ h3 {
 
 /* line 45, ../../Arafath/CL/December/235. Job board/HTML/scss/_candidates.scss */
 .featured_candidates_area .single_candidates:hover h4 {
+    text-decoration: underline;
+}
+
+.featured_candidates_area .single_candidates:hover .btn {
   color: #00D363;
 }
 
@@ -3988,18 +4005,31 @@ h3 {
   -moz-border-radius: 5px;
   border-radius: 5px;
   color: #00D363;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 40px;
   text-align: center;
   display: inline-block;
   background: #EFFDF5;
   cursor: pointer;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #00D363;
+}
+
+.job_details_area .single_jobs .jobs_right .apply_now a.delete {
+  color: #eb5c50;
+  background: #f7e1df;
+  border-color: #eb5c50;
 }
 
 /* line 83, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_details.scss */
 .job_details_area .single_jobs .jobs_right .apply_now a.heart_mark:hover {
   background: #00D363;
   color: #fff;
+}
+
+.job_details_area .single_jobs .jobs_right .apply_now a.delete:hover {
+  background: #eb5c50;
 }
 
 /* line 88, ../../Arafath/CL/December/235. Job board/HTML/scss/_job_details.scss */

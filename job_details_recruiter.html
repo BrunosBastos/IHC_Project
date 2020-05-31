@@ -33,43 +33,43 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
-        <!-- header-start -->
-        <header>
-            <div class="header-area ">
-                <div id="sticky-header" class="main-header-area">
-                    <div class="container-fluid ">
-                        <div class="header_bottom_border">
-                            <div class="row align-items-center">
-                                <div class="col-xl-3 col-lg-2">
-                                    <div class="logo">
-                                        <a href="my_jobs.html">
-                                            <img src="img/logo.png" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col" style="text-align:right;">
-                                    <div class="main-menu  d-none d-lg-block" style="text-align:right">
-                                        <nav>
-                                            <ul id="navigation">
-                                                <li><a href="help.html" target="_blank">Help</a></li>
-                                                <li><a href="my_jobs.html">My Job Offers</a></li>
-                                                <li><a href="company_profile.html">Profile</a></li>
-                                                <li><a href="index.html">Log Out</a></li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="mobile_menu d-block d-lg-none"></div>
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid ">
+                    <div class="header_bottom_border">
+                        <div class="row align-items-center">
+                            <div class="col-xl-3 col-lg-2">
+                                <div class="logo">
+                                    <a href="my_jobs.html">
+                                        <img src="img/logo.png" alt="">
+                                    </a>
                                 </div>
                             </div>
+                            <div class="col" style="text-align:right;">
+                                <div class="main-menu  d-none d-lg-block" style="text-align:right">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="help.html" target="_blank">Help</a></li>
+                                            <li><a href="my_jobs.html">My Job Offers</a></li>
+                                            <li><a href="company_profile.html">Profile</a></li>
+                                            <li><a href="index.html">Log Out</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
                         </div>
-    
                     </div>
+
                 </div>
             </div>
-        </header>
-        <!-- header-end -->
+        </div>
+    </header>
+    <!-- header-end -->
 
     <!-- bradcam_area  -->
     <div class="bradcam_area bradcam_bg_1">
@@ -96,33 +96,39 @@
                                     <img src="img/svg_icon/1.svg" alt="">
                                 </div>
                                 <div class="jobs_conetent">
-                                    <a href="#"><h4 data-bind="text:role"></h4></a>
+                                    <a href="#">
+                                        <h4 data-bind="text:role"></h4>
+                                    </a>
                                     <div class="links_locat d-flex align-items-center">
                                         <div class="location">
                                             <p> <i class="fa fa-map-marker"></i> <span data-bind="text:city"></span></p>
                                         </div>
                                         <div class="location">
-                                            <p> <i class="fa fa-clock-o"></i> <span data-bind="text:jobNature"></span></p>
+                                            <p> <i class="fa fa-clock-o"></i> <span data-bind="text:jobNature"></span>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row jobs_right">
                                 <div class="mx-2 apply_now">
-                                    <a class="heart_mark" href="#" data-toggle="tooltip" data-placement="top" title="Edit Job Offer"> <i class="ti-pencil-alt"></i> </a>
+                                    <span data-toggle="modal" data-target="#myModal">
+                                    <a class="heart_mark" href="#" data-toggle="tooltip" data-placement="top"
+                                        title="Edit Job Offer">  <i class="ti-pencil-alt"></i> </a></span>
                                 </div>
                                 <div class="mx-2 apply_now">
-                                    <a class="heart_mark" href="#" data-toggle="tooltip" data-placement="top" title="Delete Job Offer"> <i class="ti-trash"></i> </a>
+                                    <a class="heart_mark delete" href="#" data-toggle="tooltip" data-placement="top"
+                                        title="Delete Job Offer"> <i class="ti-trash"></i> </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="descript_wrap white-bg">
                         <div class="single_wrap row">
                             <div class="job_sumary col-sm-12 col-md-6">
                                 <div class="job_content" style="padding: 0;">
-                                    <h4 >Job summary:</h4>
+                                    <h4>Job summary:</h4>
                                     <ul>
                                         <li>Published on: <span data-bind="text:date"></span></li>
                                         <li>Vacancy: <span data-bind="text:vacancy"></span></li>
@@ -158,105 +164,106 @@
                         <option value="3">Education Level</option>
                     </select>
                     <div class="input-group-append">
-                        <button id="sort-order" class="btn btn-outline-secondary"> Asc <i class="ti-bar-chart"></i></button>
+                        <button id="sort-order" class="btn btn-outline-secondary"> Asc <i
+                                class="ti-bar-chart"></i></button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <!-- featured_candidates_area_start  -->
     <div class="featured_candidates_area candidate_page_padding">
-        
+
         <div class="container">
-            
+
             <div class="row">
                 <div class="col-md-6 col-lg-3" data-bind="click:candidateDetails">
                     <a href="./profile.html">
-                    <div class="single_candidates text-center">
-                        <div class="thumb">
-                            <img src="img/candiateds/1.png" alt="">
+                        <div class="single_candidates text-center">
+                            <div class="thumb">
+                                <img src="img/candiateds/1.png" alt="">
+                            </div>
+                            <h4>Markary Jondon</h4>
+                            <p>Software Engineer</p>
+                            <button class="btn btn-default w-10 mt-2">View Profile</button>
                         </div>
-                        <h4>Markary Jondon</h4>
-                        <p>Software Engineer</p>
-                        <button class="btn btn-default w-10 mt-2" >View Profile</button>
-                    </div>
-                    
+
                     </a>
                 </div>
                 <div class="col-md-6 col-lg-3" data-bind="click:candidateDetails">
                     <a href="./profile.html">
-                    <div class="single_candidates text-center">
-                        <div class="thumb">
-                            <img src="img/candiateds/2.png" alt="">
+                        <div class="single_candidates text-center">
+                            <div class="thumb">
+                                <img src="img/candiateds/2.png" alt="">
+                            </div>
+                            <h4>Ronald Dwayne</h4>
+                            <p>Bank Administrator</p>
+                            <button class="btn btn-default w-10 mt-2">View Profile</button>
                         </div>
-                        <h4>Ronald Dwayne</h4>
-                        <p>Bank Administrator</p>
-                        <button class="btn btn-default w-10 mt-2" >View Profile</button>
-                    </div>
                     </a>
                 </div>
                 <div class="col-md-6 col-lg-3" data-bind="click:candidateDetails">
                     <a href="./profile.html">
-                    <div class="single_candidates text-center">
-                        <div class="thumb">
-                            <img src="img/candiateds/3.png" alt="">
+                        <div class="single_candidates text-center">
+                            <div class="thumb">
+                                <img src="img/candiateds/3.png" alt="">
+                            </div>
+                            <h4>Jonathan Joestar</h4>
+                            <p>Software Engineer</p>
+                            <button class="btn btn-default w-10 mt-2">View Profile</button>
                         </div>
-                        <h4>Jonathan Joestar</h4>
-                        <p>Software Engineer</p>
-                        <button class="btn btn-default w-10 mt-2" >View Profile</button>
-                    </div>
                     </a>
                 </div>
                 <div class="col-md-6 col-lg-3" data-bind="click:candidateDetails">
                     <a href="./profile.html">
-                    <div class="single_candidates text-center">
-                        <div class="thumb">
-                            <img src="img/candiateds/4.png" alt="">
+                        <div class="single_candidates text-center">
+                            <div class="thumb">
+                                <img src="img/candiateds/4.png" alt="">
+                            </div>
+                            <h4>Joseph Joestar</h4>
+                            <p>Mechanic Engineer</p>
+                            <button class="btn btn-default w-10 mt-2">View Profile</button>
                         </div>
-                        <h4>Joseph Joestar</h4>
-                        <p>Mechanic Engineer</p>
-                        <button class="btn btn-default w-10 mt-2" >View Profile</button>
-                    </div>
                     </a>
                 </div>
                 <div class="col-md-6 col-lg-3" data-bind="click:candidateDetails">
-                    
+
                     <a href="./profile.html">
-                    <div class="single_candidates text-center">
-                        <div class="thumb">
-                            <img src="img/candiateds/5.png" alt="">
+                        <div class="single_candidates text-center">
+                            <div class="thumb">
+                                <img src="img/candiateds/5.png" alt="">
+                            </div>
+                            <h4>Beatriz Correia</h4>
+                            <p>Design Teacher</p>
+                            <button class="btn btn-default w-10 mt-2">View Profile</button>
                         </div>
-                        <h4>Beatriz Correia</h4>
-                        <p>Design Teacher</p>
-                        <button class="btn btn-default w-10 mt-2" >View Profile</button>
-                    </div>
                     </a>
                 </div>
                 <div class="col-md-6 col-lg-3" data-bind="click:candidateDetails">
                     <a href="./profile.html">
-                    <div class="single_candidates text-center">
-                        <div class="thumb">
-                            <img src="img/candiateds/6.png" alt="">
+                        <div class="single_candidates text-center">
+                            <div class="thumb">
+                                <img src="img/candiateds/6.png" alt="">
+                            </div>
+                            <h4>Thalyson Watson</h4>
+                            <p>Biologist</p>
+                            <button class="btn btn-default w-10 mt-2">View Profile</button>
                         </div>
-                        <h4>Thalyson Watson</h4>
-                        <p>Biologist</p>
-                        <button class="btn btn-default w-10 mt-2" >View Profile</button>
-                    </div>
                     </a>
                 </div>
-                <div class="col-md-6 col-lg-3"  data-bind="click:candidateDetails">
+                <div class="col-md-6 col-lg-3" data-bind="click:candidateDetails">
                     <a href="./profile.html">
-                    <div class="single_candidates text-center">
-                        <div class="thumb">
-                            <img src="img/candiateds/7.png" alt="">
+                        <div class="single_candidates text-center">
+                            <div class="thumb">
+                                <img src="img/candiateds/7.png" alt="">
+                            </div>
+                            <h4>Nevaeh Angel</h4>
+                            <p>Streamer</p>
+                            <button class="btn btn-default w-10 mt-2">View Profile</button>
                         </div>
-                        <h4>Nevaeh Angel</h4>
-                        <p>Streamer</p>
-                        <button class="btn btn-default w-10 mt-2" >View Profile</button>
-                    </div>
                     </a>
-                </div>                   
+                </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
@@ -264,7 +271,6 @@
                         <ul>
                             <li><a href="#"> <i class="ti-angle-left"></i> </a></li>
                             <li><a href="#"><span>01</span></a></li>
-                            <li><a href="#"><span>02</span></a></li>
                             <li><a href="#"> <i class="ti-angle-right"></i> </a></li>
                         </ul>
                     </div>
@@ -273,6 +279,85 @@
         </div>
     </div>
     <!-- featured_candidates_area_end  -->
+
+
+    <!-- Modal -->
+    <div class="modal fade bd-example-modal-lg " id="myModal" tabindex="0" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Profile</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-auto">
+                                <div class="form-group job_details_area mt-3" style="background: none;padding: 0;">
+                                    <div class="single_jobs" style="border: none;padding: 0">
+                                        <div class="jobs_left ">
+                                            <div class="thumb">
+                                                <img src="img/svg_icon/1.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group job_details_area mt-3" style="background: none;padding: 0;">
+                                    <button class="btn btn-secondary" style="width: 82px; font-size: 12px;">Edit Image</button>
+                                </div>
+                            </div>
+                            <div class="form-group col">
+                                <div class="form-group">
+                                    <label for="SeekerRegisterEmail">Location</label>
+                                    <input type="email" class="form-control " id="SeekerRegisterEmail" data-bind="value:city">
+                                    <div id="RSInvalidEmail" class="invalid-feedback d-none">
+                                        Invalid email.
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="SeekerRegisterPassword">Vacancy</label>
+                                    <input type="text" class="form-control " id="SeekerRegisterPassword" data-bind="value:vacancy">
+                                    <div id="RSInvalidPassword" class="invalid-feedback d-none">
+                                        Invalid password length.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <label for="SeekerRegisterName">Job Nature</label>
+                                <input type="text" class="form-control " id="SeekerRegisterName" data-bind="value:jobNature">
+                                <div id="RSInvalidName" class="invalid-feedback d-none">
+                                    Invalid name.
+                                </div>
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-5">
+                                <label for="SeekerRegisterYear">Salary</label>
+                                <div class="input-group">
+                                    <input type="text" placeholder="" class="form-control" id="SeekerRegisterYear" data-bind="value:salary">
+                                    <div id="RSInvalidBirth" class="invalid-feedback d-none">
+                                        Invalid Birth Date.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="CreateJobDescription">Description</label>
+                            <span class="textarea form-control" role="textbox" contenteditable data-bind="text:description"></span>
+                        </div> 
+                      </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- footer start -->
     <footer class="footer">
@@ -299,7 +384,7 @@
                     </div>
                 </div>
             </div>
-        </div>  
+        </div>
     </footer>
     <!--/ footer end  -->
 
@@ -336,7 +421,7 @@
     <script src="js/knockout.js"></script>
     <script src="js/main.js"></script>
     <script src="js/job_details_recruiter.js"></script>
-    
+
 </body>
 
 </html>
