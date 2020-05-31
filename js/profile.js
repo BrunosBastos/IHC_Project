@@ -50,8 +50,8 @@ $(document).ready(function () {
     for (let i = 0; i < seekers.length; i++) {
         if (current_user.localeCompare(seekers[i].email) == 0) {
             user_type = "seeker";
-            $("#rejectButton").hide()
-            $("#acceptButton").hide()
+            $("#reject").hide()
+            $("#accept").hide()
             $(".recr-nav").parent().remove()
             $("#headerProf").text("Your Account")
             current_profile = seekers[i]
@@ -73,18 +73,18 @@ $(document).ready(function () {
                     if (applications[i].email.localeCompare(current_profile.email) == 0 && applications[i].id == current_job.id) {
                         if (applications[i].status.localeCompare("A") == 0) {
                             localStorage.setItem("applications", JSON.stringify(applications));
-                            $("#acceptButton").text("Accepted")
-                            $("#acceptButton").removeClass("info");
-                            $("#acceptButton").addClass("btn-success");
-                            $("#acceptButton").addClass("disabled")
-                            $("#rejectButton").hide()
+                            $("#accept").text("Accepted")
+                            $("#accept").removeClass("info");
+                            $("#accept").addClass("btn-success");
+                            $("#accept").addClass("disabled")
+                            $("#reject").hide()
                             break;
                         }
                         if (applications[i].status.localeCompare("R") == 0) {
                             localStorage.setItem("applications", JSON.stringify(applications));
-                            $("#rejectButton").text("Rejected")
-                            $("#rejectButton").addClass("disabled")
-                            $("#acceptButton").hide()
+                            $("#reject").text("Rejected")
+                            $("#reject").addClass("disabled")
+                            $("#accept").hide()
                             break;
                         }
                     }
